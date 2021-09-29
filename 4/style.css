@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #202035;
+  padding: 0 50px;
+}
+
+.component {
+  background-color: #1b1b30;
+  border-radius: 10px;
+}
+
+.component--help {
+  margin-bottom: 25px;
+  padding: 40px 50px;
+}
+
+.component--help h5 {
+  margin-bottom: 25px;
+  font-size: 36px;
+  font-weight: normal;
+  color: white;
+}
+
+.component--help form {
+  width: 100%;
+}
+
+.component--help form .ilb {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 72px;
+  padding: 0 40px 0 65px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid rgba(69, 69, 100, 0.5);
+  background: #2a2a42 no-repeat 20px 55%/36px url("search_black_24dp.svg");
+}
+
+.component--help form .ilb input {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  color: white;
+  background-color: #2a2a42;
+}
+
+.component--help form .ilb input:focus + span::before {
+  -webkit-transform: translate(-30px, -25px) scale(65%);
+          transform: translate(-30px, -25px) scale(65%);
+}
+
+.component--help form .ilb input:valid + span::before {
+  -webkit-transform: translate(-30px, -25px) scale(65%);
+          transform: translate(-30px, -25px) scale(65%);
+}
+
+.component--help form .ilb:hover {
+  border-color: #454564;
+}
+
+.component--help form .ilb span::before {
+  -webkit-transition: 300ms -webkit-transform ease;
+  transition: 300ms -webkit-transform ease;
+  transition: 300ms transform ease;
+  transition: 300ms transform ease, 300ms -webkit-transform ease;
+  content: "Search for articles...";
+  position: absolute;
+  top: 24px;
+  left: 65px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component-sidebar {
+  width: 307px;
+  padding: 30px;
+}
+
+.component-sidebar h6 {
+  color: #bbbbd7;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.component-sidebar nav ul li a {
+  -webkit-transition: 400ms color ease;
+  transition: 400ms color ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  color: #786cd5;
+  padding: 6px 0;
+}
+
+.component-sidebar nav ul li a:hover {
+  color: white;
+}
+
+.component-sidebar hr {
+  margin: 25px 0;
+  height: 2px;
+  background-color: #141428;
+}
+
+.component-sidebar p {
+  padding: 0 20px 20px 0;
+  font-size: 16px;
+  color: #bbbbd7;
+  line-height: 24px;
+}
+
+.component-sidebar .contact-button {
+  display: block;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  background: #786cd5;
+  color: white;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.component-sidebar .contact-button:hover {
+  background: radial-gradient(at center, #897fd4, #0c041f);
+  -webkit-box-shadow: 0 0px 20px -5px #9d94df;
+          box-shadow: 0 0px 20px -5px #9d94df;
+}
+
+.component-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 800px;
+}
+
+.component-list ul li {
+  background-color: #1b1b30;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.component-list ul li:last-child {
+  margin: 0;
+}
+
+.component-list ul li a {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.component-list ul li a h5 {
+  color: #bbbbd7;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.component-list ul li a p {
+  width: 100%;
+  color: #bbbbd7;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.component-list ul li a span {
+  padding: 0 25px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 40px;
+  margin-left: 50px;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  border: 1px solid #1b1b30;
+  opacity: .3;
+  -webkit-box-shadow: 0 3px 26px -2px currentColor;
+          box-shadow: 0 3px 26px -2px currentColor;
+}
+
+.component-list ul li a span:hover {
+  opacity: 1;
+  border: 1px solid;
+  -webkit-transform: translate(0px, 1px);
+          transform: translate(0px, 1px);
+}
+/*# sourceMappingURL=style.css.map */

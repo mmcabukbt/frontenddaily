@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="openbtn" class="popup-open-btn">Settings</label>
+    <input type="checkbox" checked id="openbtn" hidden>
+
+    <div class="popup">
+        <div class="settings-popup">
+            <label class="close-btn" for="openbtn"></label>
+            <h2>Settings</h2>
+            <ul>
+                <li>
+                    <div class="set-item">
+                        <h4>Language</h4>
+                        <p>Let us know which language you're most comfortable using. You <br>can change it back at any
+                            time.
+                        </p>
+                        <select name="">
+                            <option value="english">English</option>
+                            <option value="turkish">Türkçe</option>
+                            <option value="deutch">Deutch</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <hr>
+            <ul>
+                <li>
+                    <div class="set-item">
+                        <h4>Autoplay videos</h4>
+                        <p>Choose if you want to autoplay on your computer.
+                        </p>
+                    </div>
+                    <label class="chklabel">
+                        <input type="checkbox" checked>
+                        <span class="checkbox"></span>
+                    </label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="set-item">
+                        <h4>Show profile photos</h4>
+                        <p>Choose whether to show or hide profile photos of other members.
+                        </p>
+                    </div>
+                    <label class="chklabel">
+                        <input type="checkbox">
+                        <span class="checkbox"></span>
+                    </label>
+                </li>
+            </ul>
+            <div class="actions">
+                <a href="#" class="active">Save</a>
+                <a href="#">Cancel</a>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

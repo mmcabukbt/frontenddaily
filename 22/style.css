@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #f0f3fa;
+  height: 100vh;
+  padding: 10px 50px;
+}
+
+.info {
+  position: fixed;
+  width: 190px;
+  top: -30px;
+  left: calc(50% - 95px);
+  padding: 0 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  line-height: 26px;
+  background-color: chartreuse;
+  z-index: 999;
+  opacity: 0;
+  -webkit-transition: 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms transform ease, 300ms opacity ease;
+  transition: 300ms transform ease, 300ms opacity ease, 300ms -webkit-transform ease;
+}
+
+.info.copied {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 1;
+}
+
+.component--cdn-list {
+  width: 668px;
+}
+
+.component--cdn-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.component--cdn-list ul li {
+  margin: 10px 0;
+}
+
+.component--cdn-list ul li a {
+  padding: 40px 50px 34px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: 0 20px 55px -20px rgba(35, 68, 126, 0.6);
+          box-shadow: 0 20px 55px -20px rgba(35, 68, 126, 0.6);
+  color: #273069;
+  -webkit-transition: 300ms background-color ease, 300ms color ease, 200ms -webkit-transform ease;
+  transition: 300ms background-color ease, 300ms color ease, 200ms -webkit-transform ease;
+  transition: 200ms transform ease, 300ms background-color ease, 300ms color ease;
+  transition: 200ms transform ease, 300ms background-color ease, 300ms color ease, 200ms -webkit-transform ease;
+}
+
+.component--cdn-list ul li a .rate {
+  position: absolute;
+  right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.component--cdn-list ul li a .rate svg {
+  margin-right: 5px;
+}
+
+.component--cdn-list ul li a .rate svg g g {
+  -webkit-transition: 400ms fill ease;
+  transition: 400ms fill ease;
+  fill: #273069;
+}
+
+.component--cdn-list ul li a .title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.component--cdn-list ul li a .title h6 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 5px;
+  color: #7f89b8;
+}
+
+.component--cdn-list ul li a .description {
+  margin-top: 10px;
+  max-width: 70%;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.component--cdn-list ul li a .tags {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 25px;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.component--cdn-list ul li a .tags span {
+  padding: 0 12px;
+  border-radius: 30px;
+  background-color: #e6e8f6;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.component--cdn-list ul li a:hover {
+  background-color: #273069;
+  color: white;
+  -webkit-transform: translate(-1px, -2px);
+          transform: translate(-1px, -2px);
+}
+
+.component--cdn-list ul li a:hover .tags span {
+  background-color: #1c224b;
+}
+
+.component--cdn-list ul li a:hover .rate svg g g {
+  fill: white;
+}
+
+.component--cdn-detail {
+  width: 668px;
+  background-color: white;
+  -webkit-box-shadow: 0 20px 55px -20px rgba(35, 68, 126, 0.6);
+          box-shadow: 0 20px 55px -20px rgba(35, 68, 126, 0.6);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.component--cdn-detail h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #181d39;
+  margin-bottom: 20px;
+}
+
+.component--cdn-detail .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.component--cdn-detail .form li {
+  margin-right: 20px;
+}
+
+.component--cdn-detail .form li label {
+  display: block;
+  font-size: 16px;
+  color: #181d39;
+  margin-bottom: 10px;
+}
+
+.component--cdn-detail .form li select {
+  cursor: pointer;
+  min-width: 154px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced7e9;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: no-repeat calc(100% - 15px) 50%/14px url("img/arrow-down.svg");
+}
+
+.component--cdn-detail .form li select:hover {
+  border-color: #273069;
+}
+
+.component--cdn-detail .items {
+  margin-bottom: 30px;
+}
+
+.component--cdn-detail .items li {
+  margin-bottom: 5px;
+  height: 75px;
+  border-radius: 5px;
+  background-color: #f0f3fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px 0 25px;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.component--cdn-detail .items li:last-child {
+  margin-bottom: 0;
+}
+
+.component--cdn-detail .items li .text {
+  font-size: 16px;
+}
+
+.component--cdn-detail .items li button {
+  cursor: pointer;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 10px -2px rgba(35, 68, 126, 0.4);
+          box-shadow: 0 2px 10px -2px rgba(35, 68, 126, 0.4);
+  position: relative;
+}
+
+.component--cdn-detail .items li button::before {
+  position: absolute;
+  content: attr(data-copy);
+  top: 5px;
+  white-space: nowrap;
+  right: -14px;
+  padding: 0 10px;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: right;
+  border-radius: 8px;
+  background-color: #273069;
+  color: white;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 300ms visibility ease, 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms visibility ease, 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms transform ease, 300ms visibility ease, 300ms opacity ease;
+  transition: 300ms transform ease, 300ms visibility ease, 300ms opacity ease, 300ms -webkit-transform ease;
+}
+
+.component--cdn-detail .items li button::after {
+  position: absolute;
+  content: '';
+  top: 27px;
+  right: 24px;
+  border: 4px solid transparent;
+  border-top-color: #273069;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 300ms visibility ease, 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms visibility ease, 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms transform ease, 300ms visibility ease, 300ms opacity ease;
+  transition: 300ms transform ease, 300ms visibility ease, 300ms opacity ease, 300ms -webkit-transform ease;
+}
+
+.component--cdn-detail .items li button.copied::before {
+  content: attr(data-copied);
+}
+
+.component--cdn-detail .items li button:hover::before, .component--cdn-detail .items li button:hover::after {
+  -webkit-transform: scale(1) translateY(-28px);
+          transform: scale(1) translateY(-28px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.component--cdn-detail .items li:hover {
+  background-color: #dde4f4;
+}
+
+.component--cdn-detail .more-btn {
+  height: 75px;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--cdn-detail .more-btn a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  color: #181d39;
+  border: 1px solid #7f89b8;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: 300ms background-color ease, 300ms color ease, 300ms border-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms background-color ease, 300ms color ease, 300ms border-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms background-color ease, 300ms color ease, 300ms border-color ease, 300ms transform ease, 300ms box-shadow ease;
+  transition: 300ms background-color ease, 300ms color ease, 300ms border-color ease, 300ms transform ease, 300ms box-shadow ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+}
+
+.component--cdn-detail .more-btn a:hover {
+  color: white;
+  background-color: #273069;
+  border-color: #273069;
+  -webkit-transform: translate(-1px, -2px);
+          transform: translate(-1px, -2px);
+  -webkit-box-shadow: 0 6px 15px -5px rgba(24, 29, 57, 0.8);
+          box-shadow: 0 6px 15px -5px rgba(24, 29, 57, 0.8);
+}
+/*# sourceMappingURL=style.css.map */

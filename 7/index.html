@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <div class="cookie-banner style1" id="cookie1">
+      <!-- <div class="cookie-banner style1 dark"> -->
+      <p>We use third-party cookies to personalize content, ads, and analyze site traffic.<br>
+         <a href="#">Learn more</a>
+      </p>
+      <div class="actions">
+         <a href="#" onclick="delayCookie('cookie1', 2)">Decline</a>
+         <a href="#" class="alw-btn" onclick="setCookie('cookie1', 'f987d987f8d7fdfdf908', 2)">Allow cookies</a>
+         <!--2 günlük çerez-->
+      </div>
+   </div>
+
+   <div style="display:none" class="cookie-banner style2" id="cookie2">
+      <!-- <div class="cookie-banner style1 dark"> -->
+      <img src="./cookie_black_24dp.svg" alt="cookie-icon">
+      <p>We use third-party cookies to personalize content, ads, and analyze site traffic.<br>
+         <a href="#">Learn more</a>
+      </p>
+      <div class="actions">
+         <a href="#" class="alw-btn" onclick="setCookie('cookie2', 'f987d987f8d7fdfdf908', 2)">Okay</a>
+      </div>
+   </div>
+   <script src="./cookie.js"></script>
+</body>
+
+</html>

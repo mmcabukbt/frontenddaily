@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  color: #111127;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f1e8e6;
+  padding: 0 50px;
+}
+
+.component--recipe-1 {
+  margin-top: 10px;
+  width: 467px;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0 15px 30px -25px #f55951;
+          box-shadow: 0 15px 30px -25px #f55951;
+}
+
+.component--recipe-1 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component--recipe-1 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.component--recipe-1 ul li img {
+  margin-right: 8px;
+}
+
+.component--recipe-2 {
+  margin-top: 10px;
+  width: 353px;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0 20px 40px -35px #f55951;
+          box-shadow: 0 20px 40px -35px #f55951;
+}
+
+.component--recipe-2 h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.component--recipe-2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component--recipe-2 ul li {
+  height: 42px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #f3d6cd;
+  background-color: rgba(243, 214, 205, 0.3);
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  cursor: pointer;
+}
+
+.component--recipe-2 ul li:hover, .component--recipe-2 ul li.active {
+  background-color: #fd6a50;
+  color: white;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 2px 5px 14px -5px #f55951;
+          box-shadow: 2px 5px 14px -5px #f55951;
+}
+
+.component--recipe-3 {
+  margin-top: 10px;
+  width: 420px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #fd6a50;
+  -webkit-box-shadow: 0 20px 40px -35px #f55951;
+          box-shadow: 0 20px 40px -35px #f55951;
+}
+
+.component--recipe-3 h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.component--recipe-3 input {
+  height: 60px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 0 20px 0 55px;
+  caret-color: #fd6a50;
+  background: white no-repeat 18px 53%/26px url("img/icon-search.svg");
+}
+
+.component--recipe-3 input::-webkit-input-placeholder {
+  color: #df937b;
+}
+
+.component--recipe-3 input:-ms-input-placeholder {
+  color: #df937b;
+}
+
+.component--recipe-3 input::-ms-input-placeholder {
+  color: #df937b;
+}
+
+.component--recipe-3 input::placeholder {
+  color: #df937b;
+}
+
+.component--recipe-4 {
+  margin-top: 10px;
+  width: 345px;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  -webkit-box-shadow: 0 20px 40px -35px #f55951;
+          box-shadow: 0 20px 40px -35px #f55951;
+}
+
+.component--recipe-4 .cover {
+  height: 180px;
+}
+
+.component--recipe-4 .cover img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.component--recipe-4 .card {
+  padding: 30px 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--recipe-4 .card h4 {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+
+.component--recipe-4 .card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.component--recipe-4 .card form input {
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #f3d6cd;
+  padding: 0 20px;
+  caret-color: #fd6a50;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.component--recipe-4 .card form input::-webkit-input-placeholder {
+  color: #df937b;
+}
+
+.component--recipe-4 .card form input:-ms-input-placeholder {
+  color: #df937b;
+}
+
+.component--recipe-4 .card form input::-ms-input-placeholder {
+  color: #df937b;
+}
+
+.component--recipe-4 .card form input::placeholder {
+  color: #df937b;
+}
+
+.component--recipe-4 .card form input:hover, .component--recipe-4 .card form input:focus {
+  border-color: #fd6a50;
+}
+
+.component--recipe-4 .card form button {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #fd6a50;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  cursor: pointer;
+}
+
+.component--recipe-4 .card form button:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 2px 4px 13px -2px #f55951;
+          box-shadow: 2px 4px 13px -2px #f55951;
+}
+
+.component--recipe-4 .card span {
+  font-size: 14px;
+}
+
+.component--recipe-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  width: 625px;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  -webkit-box-shadow: 0 20px 40px -35px #f55951;
+          box-shadow: 0 20px 40px -35px #f55951;
+  padding: 20px;
+}
+
+.component--recipe-5 .cover {
+  min-width: 180px;
+  width: 180px;
+  height: 250px;
+  margin-right: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.component--recipe-5 .cover img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.component--recipe-5 .content {
+  position: relative;
+}
+
+.component--recipe-5 .content .favorite-btn {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  top: 0;
+  right: 0;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid #f3d6cd;
+}
+
+.component--recipe-5 .content .favorite-btn:hover, .component--recipe-5 .content .favorite-btn.active {
+  background-color: #fd6a50;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 10px #d4160c;
+          box-shadow: 1px 1px 10px #d4160c;
+}
+
+.component--recipe-5 .content .favorite-btn:hover svg path, .component--recipe-5 .content .favorite-btn.active svg path {
+  stroke: white;
+}
+
+.component--recipe-5 .content .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.component--recipe-5 .content .title h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.component--recipe-5 .content .title h3:hover {
+  color: #fd6a50;
+  text-shadow: 0px -1px 1px #bbbbe2;
+}
+
+.component--recipe-5 .content p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 40px 20px 0;
+}
+
+.component--recipe-5 .content .stars {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
+  height: 20px;
+}
+
+.component--recipe-5 .content .stars input {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  margin-top: -20px;
+  -webkit-transition: 500ms all ease;
+  transition: 500ms all ease;
+}
+
+.component--recipe-5 .content .stars input::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("./img/icon-star-passive.svg");
+}
+
+.component--recipe-5 .content .stars input::after {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("./img/icon-star.svg");
+}
+
+.component--recipe-5 .content .stars #rs5:checked::after, .component--recipe-5 .content .stars #rs5:checked + #rs4::after, .component--recipe-5 .content .stars #rs5:checked + #rs4 + #rs3::after, .component--recipe-5 .content .stars #rs5:checked + #rs4 + #rs3 + #rs2::after, .component--recipe-5 .content .stars #rs5:checked + #rs4 + #rs3 + #rs2 + #rs1::after {
+  visibility: visible;
+}
+
+.component--recipe-5 .content .stars #rs4:checked::after, .component--recipe-5 .content .stars #rs4:checked + #rs3::after, .component--recipe-5 .content .stars #rs4:checked + #rs3 + #rs2::after, .component--recipe-5 .content .stars #rs4:checked + #rs3 + #rs2 + #rs1::after {
+  visibility: visible;
+}
+
+.component--recipe-5 .content .stars #rs3:checked::after, .component--recipe-5 .content .stars #rs3:checked + #rs2::after, .component--recipe-5 .content .stars #rs3:checked + #rs2 + #rs1::after {
+  visibility: visible;
+}
+
+.component--recipe-5 .content .stars #rs2:checked::after, .component--recipe-5 .content .stars #rs2:checked + #rs1::after {
+  visibility: visible;
+}
+
+.component--recipe-5 .content .stars #rs1:checked::after {
+  visibility: visible;
+}
+
+.component--recipe-5 .content .stars span {
+  margin-left: 10px;
+}
+
+.component--recipe-6 {
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 40px 84px;
+  width: 993px;
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: 0 20px 40px -35px #f55951;
+          box-shadow: 0 20px 40px -35px #f55951;
+}
+
+.component--recipe-6 .next-btn, .component--recipe-6 .prev-btn {
+  position: absolute;
+  top: 40%;
+  width: 44px;
+  height: 44px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.component--recipe-6 .next-btn:hover, .component--recipe-6 .prev-btn:hover {
+  background-color: #f3d6cd;
+}
+
+.component--recipe-6 .next-btn.swiper-button-disabled, .component--recipe-6 .prev-btn.swiper-button-disabled {
+  opacity: .3;
+}
+
+.component--recipe-6 .next-btn.swiper-button-disabled:hover img, .component--recipe-6 .prev-btn.swiper-button-disabled:hover img {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.component--recipe-6 .prev-btn {
+  left: 20px;
+}
+
+.component--recipe-6 .prev-btn:hover img {
+  -webkit-transition: 300ms -webkit-transform ease;
+  transition: 300ms -webkit-transform ease;
+  transition: 300ms transform ease;
+  transition: 300ms transform ease, 300ms -webkit-transform ease;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.component--recipe-6 .next-btn {
+  right: 20px;
+}
+
+.component--recipe-6 .next-btn:hover img {
+  -webkit-transition: 300ms -webkit-transform ease;
+  transition: 300ms -webkit-transform ease;
+  transition: 300ms transform ease;
+  transition: 300ms transform ease, 300ms -webkit-transform ease;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.component--recipe-6 .swiper-slide .card a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  background-color: white;
+  padding: 23px;
+  border: 2px solid transparent;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-transition: 400ms border-color ease;
+  transition: 400ms border-color ease;
+}
+
+.component--recipe-6 .swiper-slide .card a img {
+  width: 91px;
+  height: 91px;
+  border-radius: 50%;
+  margin-bottom: 17px;
+}
+
+.component--recipe-6 .swiper-slide .card a:hover {
+  border-color: #f3d6cd;
+}
+/*# sourceMappingURL=style.css.map */

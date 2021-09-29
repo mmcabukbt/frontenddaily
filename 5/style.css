@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #ebeef2;
+  padding: 0 20px;
+}
+
+.component--prices {
+  max-width: 922px;
+  margin: 0 auto;
+}
+
+.component--prices .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+}
+
+.component--prices .title h3 {
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.component--prices .title label {
+  width: 210px;
+  height: 50px;
+  background-color: #d4d9e0;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.component--prices .title label::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  top: 4px;
+  left: 5px;
+  border-radius: 40px;
+  background-color: white;
+  z-index: -1;
+  -webkit-transition: 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms transform ease, 300ms box-shadow ease;
+  transition: 300ms transform ease, 300ms box-shadow ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+}
+
+.component--prices .title label:hover::before {
+  -webkit-box-shadow: 0 2px 10px 3px rgba(84, 93, 104, 0.85);
+          box-shadow: 0 2px 10px 3px rgba(84, 93, 104, 0.85);
+}
+
+.component--prices .title label span {
+  width: 100px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: #171922;
+  -webkit-transition: 300ms opacity ease;
+  transition: 300ms opacity ease;
+}
+
+.component--prices .title label span:first-child {
+  opacity: 1.0;
+}
+
+.component--prices .title label span:last-child {
+  opacity: 0.5;
+}
+
+.component--prices #price-sw {
+  display: none;
+}
+
+.component--prices #price-sw:checked + .title label::before {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+.component--prices #price-sw:checked + .title label span:first-child {
+  opacity: 0.5;
+}
+
+.component--prices #price-sw:checked + .title label span:last-child {
+  opacity: 1.0;
+}
+
+.component--prices #price-sw:checked + .title + .packages .package .price-info .price span::before {
+  content: attr(data-yearly-price) " / month";
+  background-color: #44ffa8;
+  border-radius: 20px;
+  padding: 0 5px;
+}
+
+.component--prices #price-sw:checked + .title + .packages .package .price-info .description span::before {
+  content: attr(data-yearly);
+}
+
+.component--prices .packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -20px;
+}
+
+.component--prices .packages .package {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 20px;
+  background-color: white;
+  padding: 45px;
+  border-radius: 5px;
+  color: #171922;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.component--prices .packages .package h6 {
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.component--prices .packages .package .price-info {
+  margin-bottom: 30px;
+}
+
+.component--prices .packages .package .price-info .price {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 800;
+  position: relative;
+}
+
+.component--prices .packages .package .price-info .price span::before {
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  content: attr(data-monthly-price) " / month";
+  position: absolute;
+}
+
+.component--prices .packages .package .price-info .description {
+  font-size: 18px;
+  font-weight: 800;
+  opacity: .7;
+  position: relative;
+}
+
+.component--prices .packages .package .price-info .description span::before {
+  content: attr(data-monthly);
+  position: absolute;
+  left: 55px;
+}
+
+.component--prices .packages .package p {
+  font-size: 16px;
+  font-weight: 700;
+  opacity: .75;
+  margin-bottom: 35px;
+  line-height: 25px;
+}
+
+.component--prices .packages .package .button {
+  margin-top: auto;
+}
+
+.component--prices .packages .package .button a {
+  width: 100%;
+  height: 60px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border: 1px solid #171922;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-transition: 300ms background-color ease, 300ms color ease;
+  transition: 300ms background-color ease, 300ms color ease;
+  color: #171922;
+}
+
+.component--prices .packages .package:hover {
+  -webkit-box-shadow: 0 19px 30px -10px rgba(134, 147, 164, 0.75);
+          box-shadow: 0 19px 30px -10px rgba(134, 147, 164, 0.75);
+}
+
+.component--prices .packages .package:hover .button a {
+  background-color: #171922;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

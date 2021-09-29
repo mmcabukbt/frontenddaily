@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <label for="popup-open">
+      <img src="./img/share-icon.svg" alt="share-icon">
+      Share
+   </label>
+   <input type="checkbox" checked id="popup-open" class="popup-toggle">
+
+   <div class="popup">
+      <div class="popup-inner share-popup">
+         <label for="popup-open" class="close-btn">
+            <img src="./img/close.svg" alt="close">
+         </label>
+         <h4>Share this design</h4>
+         <ul>
+            <li>
+               <a href="#">
+                  <img src="./img/pinterest.svg" alt="pinterest">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="./img/twitter.svg" alt="twitter">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="./img/instagram.svg" alt="instagram">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="./img/facebook.svg" alt="facebook">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="./img/tumblr.svg" alt="tumblr">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="./img/linkedin.svg" alt="linkedin">
+               </a>
+            </li>
+         </ul>
+         <h6>or copy link</h6>
+         <div class="input">
+            <input type="text" id="input-url" value="https://www.uidesigndaily.com/posts/5d6ab9ea91deae0012006d44">
+            <button type="button" onclick="copy('input-url')">Copy</button>
+            <!-- <button type="button" onclick="error('input-url')">error</button> -->
+         </div>
+
+      </div>
+   </div>
+
+   <div class="popup-copy-message" id="popup-copy">
+   </div>
+
+   <script src="./main.js"></script>
+</body>
+
+</html>

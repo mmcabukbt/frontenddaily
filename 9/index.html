@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <aside class="component--job-filter">
+      <form action="">
+         <div class="search">
+            <input type="text" placeholder="Search by keyword">
+         </div>
+
+         <h6>JOB TYPES</h6>
+         <ul class="checkbox-list">
+            <li>
+               <label>
+                  <input type="checkbox">
+                  <span class="checkbox"></span>
+                  <span class="text">All</span>
+               </label>
+            </li>
+            <li>
+               <label>
+                  <input type="checkbox">
+                  <span class="checkbox"></span>
+                  <span class="text">Full Time</span>
+               </label>
+            </li>
+            <li>
+               <label>
+                  <input type="checkbox">
+                  <span class="checkbox"></span>
+                  <span class="text">Freelance</span>
+               </label>
+            </li>
+            <li>
+               <label>
+                  <input type="checkbox">
+                  <span class="checkbox"></span>
+                  <span class="text">Internship</span>
+               </label>
+            </li>
+         </ul>
+
+         <h6>LOCATION</h6>
+         <ul class="filter-form">
+            <li>
+               <label for="country">Country/Region</label>
+               <select name="" id="country">
+                  <option value="Turkey">Türkiye</option>
+                  <option value="UK">İngiltere</option>
+                  <option value="USA">Amerika</option>
+                  <option value="Germany">Almanya</option>
+               </select>
+            </li>
+            <li>
+               <label for="city">City</label>
+               <select name="" id="city">
+                  <option value="Turkey">İstanbul</option>
+                  <option value="UK">Londra</option>
+                  <option value="USA">New York</option>
+                  <option value="Germany">Berlin</option>
+               </select>
+            </li>
+            <li>
+               <button type="submit">Apply</button>
+            </li>
+         </ul>
+
+      </form>
+   </aside>
+
+   <ul class="component--job-items">
+      <li>
+         <a href="#">
+            <span class="avatar" style="color: #8a9cff">
+               R
+            </span>
+            <span class="detail">
+               <span class="title">Root</span>
+               <span class="position">Lead Designer</span>
+            </span>
+            <span class="location">
+               <img src="./place_black_24dp.svg" alt="location">
+               Anywhere
+            </span>
+         </a>
+      </li>
+      <li>
+         <a href="#">
+            <span class="avatar" style="color: #ff6da1">
+               K
+            </span>
+            <span class="detail">
+               <span class="title">Klarna</span>
+               <span class="position">Brand Designer</span>
+            </span>
+            <span class="location">
+               <img src="./place_black_24dp.svg" alt="location">
+               Anywhere
+            </span>
+         </a>
+      </li>
+      <li>
+         <a href="#">
+            <span class="avatar" style="color: #ff8a8a">
+               B
+            </span>
+            <span class="detail">
+               <span class="title">Boulevard</span>
+               <span class="position">Senior Experience Designer</span>
+            </span>
+            <span class="location">
+               <img src="./place_black_24dp.svg" alt="location">
+               Anywhere
+            </span>
+         </a>
+      </li>
+   </ul>
+
+   <div class="component--job-item">
+      <div class="title">
+         <a href="#">Product Designer (UI/UX)</a>
+         <div class="position">Product Designer (UI/UX)</div>
+      </div>
+      <p>We are looking for a UI/UX web designer to redesign our website which is a subscription snack box company.
+      </p>
+      <div class="tags">
+         <a href="#"><span>UI Design</span></a>
+         <a href="#"><span>UX Design</span></a>
+         <a href="#"><span>Prototyping</span></a>
+      </div>
+   </div>
+
+</body>
+
+</html>

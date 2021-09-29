@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 500;
+  color: #c9cedf;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #161e29;
+  padding: 10px;
+}
+
+.component--user-info {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 40px;
+  background-color: #1b2431;
+  width: 380px;
+  -webkit-box-shadow: 0 5px 15px -8px #081223;
+          box-shadow: 0 5px 15px -8px #081223;
+}
+
+.component--user-info ul {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component--user-info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: #c9cedf;
+}
+
+.component--user-info ul li a {
+  margin-right: 5px;
+}
+
+.component--user-info ul li a:hover {
+  color: #41529c;
+}
+
+.component--user-info ul li .icon {
+  width: 22px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.component--user-info ul li:nth-of-type(2) img {
+  width: 17px;
+}
+
+.component--followers {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 40px;
+  background-color: #1b2431;
+  width: 412px;
+  -webkit-box-shadow: 0 5px 15px -8px #081223;
+          box-shadow: 0 5px 15px -8px #081223;
+}
+
+.component--followers ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px;
+}
+
+.component--followers ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 10px;
+}
+
+.component--followers ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #161e29;
+}
+
+.component--followers ul li a img {
+  width: 16px;
+  margin-right: 10px;
+}
+
+.component--team {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 40px;
+  background-color: #1b2431;
+  width: 503px;
+  -webkit-box-shadow: 0 5px 15px -8px #081223;
+          box-shadow: 0 5px 15px -8px #081223;
+}
+
+.component--team h5 {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.component--team ul {
+  margin-bottom: 20px;
+}
+
+.component--team ul:last-child {
+  margin-bottom: 0;
+}
+
+.component--team ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component--team ul li .team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.component--team ul li .team img {
+  margin-right: 15px;
+}
+
+.component--team ul li .team-members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.component--team ul li .team-members a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: -10px;
+  border: 2px solid #1b2431;
+}
+
+.component--team ul li .team-members a img {
+  width: 40px;
+  height: 40px;
+}
+
+.component--skills {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 40px;
+  width: 503px;
+  -webkit-box-shadow: 0 5px 15px -8px #081223;
+          box-shadow: 0 5px 15px -8px #081223;
+}
+
+.component--skills h5 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.component--skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.component--skills ul:last-child {
+  margin-bottom: 0;
+}
+
+.component--skills ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 23px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #1b2431;
+}
+
+.component--skills ul li a:hover {
+  background-color: #2d3c52;
+}
+/*# sourceMappingURL=style.css.map */

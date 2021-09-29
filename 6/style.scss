@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800;900&display=swap');
+
+$bg0_color: #8d6379;
+$bg1_color: #4a628388;
+$h46_color: #242e4c;
+$brd_color: #ebebf2;
+$btn_color: #f775c1;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   &:focus {
+      outline: none;
+   }
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   padding: 30px 30px;
+}
+
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+.popup {
+   @include f_orta_cc;
+   position: fixed;
+   top: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: $bg0_color;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   .popup-inner {
+      position: relative;
+      .close-btn {
+         position: absolute;
+         @include f_orta_cc;
+         top: 25px;
+         right: 25px;
+         padding: 10px 10px;
+         border-radius: 25px;
+         user-select: none;
+         cursor: pointer;
+         transition: 300ms background-color ease;
+         img {
+            height: 16px;
+            width: 16px;
+         }
+         &:hover {
+            background-color: rgba(255, 0, 0, 0.3);
+         }
+      }
+   }
+   .share-popup {
+      width: 808px;
+      padding: 55px 78px;
+      background-color: white;
+      border-radius: 15px;
+      h4 {
+         font-size: 22px;
+         font-weight: 800;
+         color: $h46_color;
+         margin-bottom: 40px;
+      }
+      ul {
+         display: flex;
+         margin-bottom: 40px;
+         li {
+            flex: 1;
+            text-align: center;
+            a {
+               display:inline-flex;
+               align-items: center;
+               justify-content: center;
+               width: 82px;
+               height: 82px;
+               border-radius: 50%;
+               border: 1px solid $brd_color;
+               transition: 200ms box-shadow ease, 500ms border-color ease;
+               &:hover {
+                  border-color: $btn_color;
+                  box-shadow: 0 5px 20px -5px $h46_color;
+               }
+               img {
+                  width: 32px;
+                  height: 32px;
+               }
+            }
+         }
+      }
+      h6 {
+         font-size: 16px;
+         font-weight: 700;
+         color: $h46_color;
+         margin-bottom: 10px;
+      }
+      .input {
+         position: relative;
+         button {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            height: 53px;
+            line-height: 53px;
+            padding: 0 12px;
+            font-size: 14px;
+            font-weight: 900;
+            color: $btn_color;
+            background-color: white;
+            border-radius: 3px;
+            cursor: pointer;
+            // &:last-child {top: -50px;}
+         }
+         input {
+            height: 57px;
+            border: 1px solid $brd_color;
+            border-radius: 5px;
+            width: 100%;
+            padding: 0 15px;
+            font-size: 16px;
+            color: $h46_color;
+         }
+      }
+   }
+}
+body > label {
+   @include f_orta_cc;
+   width: 120px;
+   font-size: 20px;
+   font-weight: 800;
+   line-height: 40px;
+   border-radius: 10px;
+   border: 1px solid $btn_color;
+   color: #79015d;
+   background-color: #db72ac;
+   cursor: pointer;
+   user-select: none;
+}
+.popup-toggle {
+   display: none;
+   &:checked + .popup {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+.popup-copy-message {
+   @include f_orta_cc;
+   z-index: 999;
+   position: fixed;
+   bottom: -20px;
+   height: 25px;
+   line-height: 25px;
+   width: 180px;
+   left: calc(50% - 150px / 2);
+   border-radius: 30px;
+   font-size: 14px;
+   color: white;
+   opacity: 0;
+   visibility: hidden;
+   transition: 400ms all ease;
+   &.success {
+      background-color: rgb(68, 211, 33);
+      transform: translateY(-45px);
+      opacity: 1.0;
+      visibility: visible;
+   }
+   &.error {
+      background-color: rgb(197, 55, 55);
+      transform: translateY(-45px);
+      opacity: 1.0;
+      visibility: visible;
+   }
+}

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  color: #772492;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #eef3fd;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.help-center {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.help-center h3 {
+  margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.help-center .inner {
+  width: 558px;
+}
+
+.help-center .inner form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.help-center .inner form .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 63px;
+  height: 63px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.help-center .inner form .icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.help-center .inner form > input {
+  margin-bottom: 65px;
+  width: 100%;
+  height: 63px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 9px 10px -4px rgba(172, 192, 230, 0.4);
+          box-shadow: 0 9px 10px -4px rgba(172, 192, 230, 0.4);
+  padding: 0 20px 0 55px;
+  font-size: 16px;
+}
+
+.help-center .inner form > input::-webkit-input-placeholder {
+  color: #a2aeb9;
+}
+
+.help-center .inner form > input:-ms-input-placeholder {
+  color: #a2aeb9;
+}
+
+.help-center .inner form > input::-ms-input-placeholder {
+  color: #a2aeb9;
+}
+
+.help-center .inner form > input::placeholder {
+  color: #a2aeb9;
+}
+
+.help-center .inner .dropdown-list ul li .dropdown-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.help-center .inner .dropdown-list ul li .dropdown-content input {
+  display: none;
+}
+
+.help-center .inner .dropdown-list ul li .dropdown-content input:checked + label {
+  max-height: 50vh;
+}
+
+.help-center .inner .dropdown-list ul li .dropdown-content label {
+  -webkit-transition: 500ms max-height ease;
+  transition: 500ms max-height ease;
+  -webkit-box-shadow: 0 7px 8px -5px rgba(172, 192, 230, 0.4);
+          box-shadow: 0 7px 8px -5px rgba(172, 192, 230, 0.4);
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 8px 20px 20px;
+  width: 100%;
+  max-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #a2aeb9;
+  border-radius: 8px;
+  background: white no-repeat calc(100% - 25px) 13px/15px url("img/arrow-down.svg");
+  cursor: pointer;
+}
+
+.help-center .inner .dropdown-list ul li .dropdown-content label p {
+  margin-top: 22px;
+  padding-top: 10px;
+  border-top: 1px solid #a2aeb9;
+}
+
+.help-center .sub-cards ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.help-center .sub-cards ul li a {
+  overflow: hidden;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 15px 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 7px 8px -5px rgba(172, 192, 230, 0.8);
+          box-shadow: 0 7px 8px -5px rgba(172, 192, 230, 0.8);
+  -webkit-transition: 300ms -webkit-transform ease;
+  transition: 300ms -webkit-transform ease;
+  transition: 300ms transform ease;
+  transition: 300ms transform ease, 300ms -webkit-transform ease;
+}
+
+.help-center .sub-cards ul li a img {
+  width: 100%;
+  height: 128;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.help-center .sub-cards ul li a span {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.help-center .sub-cards ul li a:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+/*# sourceMappingURL=style.css.map */

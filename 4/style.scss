@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+$bg0_color: #202035;
+$bg1_color: #1b1b30;
+$bgi_color: #2a2a42;
+
+$h6l_color: #bbbbd7;
+
+@mixin ortala {
+   display: grid;
+   place-items: center;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   &:focus {
+      outline: none;
+   }
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   padding: 0 50px;
+}
+.component {
+   background-color: $bg1_color;
+   border-radius: 10px;
+
+   &--help {
+      margin-bottom: 25px;
+      padding: 40px 50px;
+      h5 {
+         margin-bottom: 25px;
+         font-size: 36px;
+         font-weight: normal;
+         color: white;
+      }
+      
+      form {
+         width: 100%;
+         .ilb {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 72px;
+            padding: 0 40px 0 65px;
+            font-size: 18px;
+            border-radius: 5px;
+            border:1px solid rgba(#454564, .5);
+            background: $bgi_color no-repeat 20px 55%/36px url("search_black_24dp.svg");
+            input {
+               width: 100%;
+               height: 100%;
+               font-size: 18px;
+               color:white;
+               background-color: $bgi_color;
+               &:focus + span::before {
+                  transform: translate(-30px, -25px) scale(65%) ;
+               }
+               &:valid + span::before {
+                  transform: translate(-30px, -25px) scale(65%) ;
+               }
+            }
+            &:hover {
+               border-color:#454564;
+            }
+            span::before {
+               transition: 300ms transform ease;
+               content: "Search for articles...";
+               position: absolute;               
+               top: 24px;
+               left: 65px;
+               font-size: 18px;
+               color: rgba(white, .4);
+            }
+         }
+      }
+   }
+
+   &-sidebar {
+      width: 307px;
+      padding: 30px;
+
+      h6 {
+         color: $h6l_color;
+         font-size: 18px;
+         margin-bottom: 15px;
+      }
+      nav {
+         ul {
+            li {
+               a {
+                  transition: 400ms color ease;
+                  display: flex;
+                  font-size: 16px;
+                  color: #786cd5;
+                  padding: 6px 0;
+                  &:hover {
+                     color: white;
+                  }
+               }
+            }
+         }
+      };
+
+      hr {
+         margin: 25px 0;      
+         height: 2px;
+         background-color: #141428;
+      }
+
+      p {
+         padding: 0 20px 20px 0;
+         font-size: 16px;
+         color: $h6l_color;
+         line-height: 24px;         
+      }
+      .contact-button {
+         display: block;
+         @include ortala;
+         width: 100%;
+         height: 50px;
+         font-size: 16px;
+         font-weight: bold;
+         border-radius: 5px;
+         background: #786cd5;
+         color:white;
+         transition: 300ms all ease;
+         &:hover {
+            background: radial-gradient(at center, #897fd4,  #0c041f);
+            box-shadow: 0 0px 20px -5px #9d94df;
+            // color: #211672;
+         }
+      }
+   }
+
+   &-list {
+      display: flex;
+      width: 100%;
+      min-width: 800px;
+      ul {
+         li {
+            background-color: $bg1_color;
+            border-radius: 5px;
+            margin: 10px 0;
+            &:last-child{
+               margin: 0;
+            }
+            a {
+               padding: 30px;
+               display: flex;
+               justify-content: space-between;
+               align-items: baseline;
+               h5 {
+                  color:$h6l_color;
+                  font-size: 18px;
+                  margin-bottom: 20px;
+               }
+               p {
+                  width: 100%;
+                  color:$h6l_color;
+                  font-size: 16px;
+                  line-height: 22px;
+               }
+               span {
+                  padding: 0 25px;
+                  height: 40px;
+                  @include ortala;
+                  font-size: 16px;
+                  font-weight: bold;
+                  border-radius: 40px;
+                  margin-left: 50px;
+                  transition: 300ms all ease;
+                  border: 1px solid $bg1_color;
+                  opacity: .3;
+                  box-shadow: 0 3px 26px -2px currentColor;
+                  &:hover {
+                     opacity: 1;
+                     border: 1px solid;
+                     transform: translate(0px, 1px);
+                     }
+                  // &.pink {
+                  //    border: 1px solid rgba(250, 114, 171, .1);
+                  //    color: rgb(250, 114, 171);
+                  //    &:hover {
+                  //       background-color: rgba(250, 114, 171, .15);
+                  //    }
+                  // }
+                  // &.blue {
+                  //    border: 1px solid rgba(114, 157, 250, .1);
+                  //    color: rgb(114, 157, 250);
+                  //    &:hover {
+                  //       background-color: rgba(114, 157, 250, .15);
+                  //    }
+                  // }
+               }
+            }
+         }
+      }
+   }
+}

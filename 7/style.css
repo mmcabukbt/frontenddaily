@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: rgba(0, 29, 147, 0.05);
+  margin: 10px 30px 50px;
+}
+
+.cookie-banner {
+  -webkit-box-shadow: 0 15px 45px -12px rgba(0, 29, 147, 0.4);
+          box-shadow: 0 15px 45px -12px rgba(0, 29, 147, 0.4);
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.cookie-banner.style1 {
+  background-color: white;
+  margin: 10px;
+  width: 410px;
+  height: 196px;
+  padding: 35px 35px 25px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: 500ms all ease;
+  transition: 500ms all ease;
+}
+
+.cookie-banner.style1.show {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.cookie-banner.style1 p {
+  display: block;
+  line-height: 25px;
+  color: #10182f;
+}
+
+.cookie-banner.style1 p a {
+  color: #10182f;
+}
+
+.cookie-banner.style1 p a:hover {
+  text-decoration: underline;
+}
+
+.cookie-banner.style1 .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.cookie-banner.style1 .actions a {
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  border-radius: 5px;
+  color: #10182f;
+  -webkit-transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms box-shadow ease;
+  transition: 300ms box-shadow ease, 300ms -webkit-box-shadow ease;
+}
+
+.cookie-banner.style1 .actions a.alw-btn {
+  margin-left: 10px;
+  background-color: #10182f;
+  color: white;
+}
+
+.cookie-banner.style1 .actions a:hover {
+  -webkit-box-shadow: 1px 5px 14px -3px rgba(16, 24, 47, 0.6);
+          box-shadow: 1px 5px 14px -3px rgba(16, 24, 47, 0.6);
+}
+
+.cookie-banner.style2 {
+  background-color: white;
+  margin: 10px;
+  width: 410px;
+  height: 304px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 39px 40px 35px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: 500ms all ease;
+  transition: 500ms all ease;
+}
+
+.cookie-banner.style2.show {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.cookie-banner.style2 img {
+  width: 48px;
+  height: 48px;
+}
+
+.cookie-banner.style2 p {
+  display: block;
+  line-height: 25px;
+  color: #10182f;
+}
+
+.cookie-banner.style2 p a {
+  color: #10182f;
+}
+
+.cookie-banner.style2 p a:hover {
+  text-decoration: underline;
+}
+
+.cookie-banner.style2 .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.cookie-banner.style2 .actions a {
+  height: 50px;
+  width: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  color: #10182f;
+  -webkit-transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms box-shadow ease;
+  transition: 300ms box-shadow ease, 300ms -webkit-box-shadow ease;
+}
+
+.cookie-banner.style2 .actions a.alw-btn {
+  margin-left: 10px;
+  background-color: #10182f;
+  color: white;
+}
+
+.cookie-banner.style2 .actions a:hover {
+  -webkit-box-shadow: 1px 5px 14px -3px rgba(16, 24, 47, 0.6);
+          box-shadow: 1px 5px 14px -3px rgba(16, 24, 47, 0.6);
+}
+/*# sourceMappingURL=style.css.map */

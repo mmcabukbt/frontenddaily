@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;800&display=swap');
+
+$bg0_color: #f0f6ff;
+$br1_color: #10182f;
+$bin_color: #ccdbfa;
+$bou_color: #1c53ec;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   font-weight: 500;
+   &:focus {
+      outline: none;
+   }
+   color:$br1_color;
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   @include g_ortala();
+}
+
+.component {
+   &--trial-box {
+      max-width: 566px;
+      padding: 55px 45px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 28px 30px -12px #e9ecf9;
+      h3 {
+         font-size: 22px;
+         font-weight: 800;
+         margin-bottom: 25px;
+      }
+      .credit-box {
+         display: flex;
+         align-items: center;
+         .circle-progress-bar {
+            --cevre: calc(var(--yaricap) * 2 * 3.1415926535897932384626433832795);
+            --enboy: calc(calc(var(--yaricap) * 2) + var(--cizkal));
+            --merkez: calc(var(--enboy) / 2);
+            --prg: calc(1px * calc(100 - var(--progress)) * var(--cevre) / 100);
+            @keyframes animationProgress {
+               to {
+                  stroke-dashoffset: var(--prg);
+               }
+            }
+            width: calc(var(--enboy)*1px);
+            height: calc(var(--enboy)*1px);
+            transform: rotate(-90deg);
+            svg {
+               fill: none;
+               stroke-width: var(--cizkal);
+               circle {
+                  r: var(--yaricap);
+                  cx: var(--merkez);
+                  cy: var(--merkez);
+                  stroke: $bin_color;
+                  &:nth-child(2) {
+                     stroke: $bou_color;
+                     stroke-linecap: round;
+                     stroke-dasharray: var(--cevre);
+                     stroke-dashoffset: var(--cevre);
+                     animation: 2s animationProgress linear;
+                     animation-fill-mode: forwards;
+                  }
+               }
+            }
+         }
+         div {
+            margin-left: 10px;
+            .amount {
+               font-size: 24px;
+               font-weight: 800;
+            }
+         }
+      }
+      p {
+         margin: 60px 30px 40px 0;
+         font-size: 16px;
+         line-height: 22px;
+      }
+      .action {
+         display: flex;
+         a {
+            display: flex;
+            align-items: center;
+            height: 45px;
+            margin-right: 15px;
+            padding: 0px 35px;
+            border-radius: 45px;
+            border: 3px solid #dae4f5;
+            transition: 300ms all ease;
+            &:hover {
+               border-color: $bou_color;
+            }
+            &.active {
+               background-color: $br1_color;
+               color: white;
+               &:hover {
+                  background-color: $bou_color;
+                  border-color: $bou_color;
+               }
+            }
+         }
+      }
+   }
+}

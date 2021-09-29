@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;800&display=swap');
+
+$bg0_color: #f0f6ff;
+$br1_color: #10182f;
+$bin_color: #ccdbfa;
+$bou_color: #1c53ec;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   font-weight: 500;
+   &:focus {
+      outline: none;
+   }
+   color:$br1_color;
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   @include g_ortala();
+}
+
+.component {
+   &--blog-card {
+      max-width: 1065px;
+      ul {
+         display: flex;
+         li {
+            padding: 0 25px;
+            width: calc(100% / 3);
+            display: flex;
+            a {
+               display: flex;
+               flex-direction: column;
+               background-color: white;
+               border-radius: 10px;
+               overflow: hidden;
+               box-shadow: 0 34px 26px -8px #b2bbe2;
+               > img {
+                  width: 100%;
+               }
+               .inner {
+                  padding: 25px 25px 30px;
+                  display: flex;
+                  flex-direction: column;
+                  flex: 1;
+                  .category {
+                     background-color: currentColor;
+                     align-self: flex-start;
+                     padding: 2px 10px;
+                     border-radius: 10px;
+                     color: white;
+                     font-size: 12px;
+                     text-transform: uppercase;
+                     margin-bottom: 10px;
+                  }
+                  .title {
+                     font-size: 18px;
+                     font-weight: 800;
+                     line-height: 23px;
+                     margin-bottom: 10px;
+                  }
+                  .description {
+                     font-size: 16px;
+                     line-height: 20px;
+                     margin-bottom: 40px;
+                  }
+                  .author {
+                     display: flex;
+                     align-items: center;
+                     margin-top: auto;
+                     img {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                     }
+                     .author-inner {
+                        display: flex;
+                        flex-direction: column;
+                        .author-name {
+                           font-size: 16px;
+                           font-weight: 800;
+                        }
+                        .date {
+                           font-size: 14px;
+                           opacity: .6;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

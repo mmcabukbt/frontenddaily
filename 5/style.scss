@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800;900&display=swap');
+
+$bg0_color: #ebeef2;
+$brg_color: #171922;
+
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   &:focus {
+      outline: none;
+   }
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   padding: 0 20px;
+}
+
+.component {
+   &--prices {
+      max-width: 922px;
+      margin: 0 auto;
+      .title {
+         user-select: none;
+         @include f_orta_sb;
+         margin-bottom: 55px;
+         h3 {
+            font-size: 42px;
+            font-weight: 900;
+         }
+         label {
+            width: 210px;
+            height: 50px;
+            background-color: #d4d9e0;
+            border-radius: 50px;
+            @include f_orta_cc;
+            position: relative;
+            cursor: pointer;
+            z-index: 1;
+            // overflow: auto;
+            &::before {
+               content: "";
+               position: absolute;
+               width: 100px;
+               height: 40px;
+               top: 4px;
+               left: 5px;
+               border-radius: 40px;
+               background-color: white;
+               z-index: -1;
+               transition: 300ms transform ease, 300ms box-shadow ease;
+            }
+            &:hover {
+               &::before {
+                  box-shadow: 0 2px 10px 3px rgba(#545d68, .85);
+               } 
+            }
+            span {
+               width: 100px;
+               height: 40px;
+               @include g_ortala;
+               font-size: 16px;
+               font-weight:800;
+               color: $brg_color;
+               transition: 300ms opacity ease;
+               &:first-child {
+                  opacity: 1.0;
+               }
+               &:last-child {
+                  opacity: 0.5;
+               }
+            }
+         }
+      }
+      #price-sw {
+         display: none;
+         &:checked + .title {
+            label {
+               &::before {
+                  transform: translateX(100px);
+               }
+               span {
+                  &:first-child {
+                     opacity: 0.5;
+                  }
+                  &:last-child {
+                     opacity: 1.0;
+                  }
+               }
+            }
+            & + .packages .package .price-info {
+               & .price span::before {
+                  content: attr(data-yearly-price) " / month";
+                  background-color: rgb(68, 255, 168);
+                  border-radius: 20px;
+                  padding: 0 5px;
+               }
+               & .description span::before {
+                  content: attr(data-yearly);
+               }
+            } 
+         }
+      }
+      .packages {
+         display: flex;
+         margin: 0 -20px;
+         .package {
+            flex: 1;
+            margin: 0 20px;
+            background-color: white;
+            padding: 45px;
+            border-radius: 5px;
+            color: $brg_color;
+            display: flex;
+            flex-direction: column;
+            h6 {
+               margin-bottom: 35px;
+               font-size: 28px;
+               font-weight: 800;
+            }
+            .price-info {
+               margin-bottom: 30px;
+               .price {
+                  margin-bottom: 10px;
+                  font-size: 22px;
+                  font-weight: 800;
+                  position: relative;
+                  span::before {
+                     transition: 300ms all ease;
+                     content: attr(data-monthly-price) " / month";
+                     position: absolute;
+                  }
+               } 
+               .description {
+                  font-size: 18px;
+                  font-weight: 800;
+                  opacity: .7;
+                  position: relative;
+                  span::before {
+                     content: attr(data-monthly);
+                     position: absolute;
+                     left: 55px;
+                  }
+               }
+            }
+            p {
+               font-size: 16px;
+               font-weight: 700;
+               opacity: .75;
+               margin-bottom: 35px;
+               line-height: 25px;
+            }
+            .button {
+               margin-top: auto;
+               a {
+                  width: 100%;
+                  height: 60px;
+                  @include g_ortala;
+                  border: 1px solid $brg_color; 
+                  border-radius: 5px;
+                  font-size: 18px;
+                  font-weight: 700;
+                  transition: 300ms background-color ease, 300ms color ease;
+                  color: $brg_color;
+               }
+            }
+            &:hover {
+               box-shadow: 0 19px 30px -10px rgba(#8693a4, .75);
+               .button {
+                  a {
+                     background-color: $brg_color;
+                     color: white;                     
+                  }
+               }
+            }
+         }
+      }
+   }
+}

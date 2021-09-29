@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;800&display=swap');
+
+$bg0_color: #161e29;
+$bg1_color: #1b2431;
+$br1_color: #c9cedf;
+$br2_color: #41529c;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   font-weight: 500;
+   &:focus {
+      outline: none;
+   }
+   color:$br1_color;
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   padding: 10px;
+}
+
+.component {
+   &--user-info{
+      margin-top: 10px;
+      border-radius: 10px;
+      padding: 40px;
+      background-color: $bg1_color;
+      width: 380px;
+      box-shadow: 0 5px 15px -8px #081223;
+      ul {
+         height: 150px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #c9cedf;
+            a {
+               margin-right: 5px;
+               &:hover {
+                  color: $br2_color;
+               }
+            }
+            .icon {
+               width: 22px;
+               text-align: center;
+               margin-right: 15px;
+               img {
+               }
+            }
+            &:nth-of-type(2) {
+               img {
+                  width: 17px;
+               }
+            }
+         }
+      }
+   }
+
+   &--followers {
+      margin-top: 10px;
+      border-radius: 10px;
+      padding: 40px;
+      background-color: $bg1_color;
+      width: 412px;
+      box-shadow: 0 5px 15px -8px #081223;
+      ul {
+         display: flex;
+         margin: 0 -10px;
+         li {
+            flex: 1;
+            margin: 0 10px;
+            a {
+               @include f_orta_cc();
+               padding: 10px;
+               border-radius: 7px;
+               background-color: $bg0_color;
+               img {
+                  width: 16px;
+                  margin-right: 10px;
+               }
+            }
+         }
+      }
+   }
+
+   &--team {
+      margin-top: 10px;
+      border-radius: 10px;
+      padding: 40px;
+      background-color: $bg1_color;
+      width: 503px;
+      box-shadow: 0 5px 15px -8px #081223;
+      h5 {
+         font-size: 22px;
+         margin-bottom: 40px;
+      }
+      ul {
+         margin-bottom: 20px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+         li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .team {
+               display: flex;
+               align-items: center;
+               font-size: 18px;
+               img {
+                  margin-right: 15px;
+               }
+            }
+            .team-members {
+               display: flex;
+               align-items: center;
+               flex-direction: row-reverse;
+               a {
+                  @include f_orta_cc();
+                  overflow: hidden;
+                  border-radius: 50%;
+                  margin-left: -10px;
+                  border: 2px solid $bg1_color;
+                  img {
+                     width: 40px;
+                     height: 40px;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &--skills {
+      margin-top: 10px;
+      border-radius: 10px;
+      padding: 40px;
+      width: 503px;
+      box-shadow: 0 5px 15px -8px #081223;
+      h5 {
+         font-size: 22px;
+         margin-bottom: 20px;
+      }
+      ul {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 10px;
+         margin-bottom: 20px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+         li {
+            a {
+               display: flex;
+               padding: 10px 23px;
+               border-radius: 10px;
+               font-size: 16px;
+               background-color: $bg1_color;
+               &:hover {
+                  background-color: lighten($bg1_color, 10);
+               }
+            }
+         }
+      }
+   }
+}

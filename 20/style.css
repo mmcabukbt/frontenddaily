@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #505b72;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #f0f2fb;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--login .content {
+  width: 451px;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 36px -15px #0e1c61;
+          box-shadow: 0 10px 36px -15px #0e1c61;
+}
+
+.component--login .content header {
+  height: 112px;
+  padding: 24px;
+  background: rgba(85, 110, 230, 0.25) no-repeat right 50% url("img/login-image.svg");
+}
+
+.component--login .content header h5 {
+  margin-bottom: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #556ee6;
+}
+
+.component--login .content header p {
+  font-size: 14px;
+  color: #556ee6;
+}
+
+.component--login .content .user-avatar {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+
+.component--login .content .user-avatar img {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  left: 25px;
+  top: -25px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.component--login .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px 28px;
+}
+
+.component--login .content form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.component--login .content form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.component--login .content form .inputs input {
+  display: block;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+  caret-color: #556ee6;
+}
+
+.component--login .content form .inputs input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.component--login .content form .inputs input:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.component--login .content form .inputs input::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.component--login .content form .inputs input::placeholder {
+  font-size: 14px;
+}
+
+.component--login .content form .inputs input:hover, .component--login .content form .inputs input:focus {
+  border-color: #556ee6;
+}
+
+.component--login .content form .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--login .content form .remember input {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  background: no-repeat 50% 50%/12px url("img/icon-check.svg");
+}
+
+.component--login .content form .remember input:checked {
+  background-color: #556ee6;
+}
+
+.component--login .content form .remember input:hover {
+  border-color: #556ee6;
+}
+
+.component--login .content form .remember label {
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.component--login .content form .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.component--login .content form .actions button {
+  width: 100%;
+  height: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #556ee6;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.component--login .content form .actions button:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  background-color: #2948df;
+  -webkit-box-shadow: 0 5px 16px -5px black;
+          box-shadow: 0 5px 16px -5px black;
+}
+
+.component--login .content form .actions a {
+  margin-top: 15px;
+  padding-left: 20px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 40px;
+  background: no-repeat 28% 50%/14px url("img/icon-lock.svg");
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.component--login .content form .actions a:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  background-color: rgba(85, 110, 230, 0.25);
+}
+
+.component--login .content .signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.component--login .content .signup a {
+  font-weight: bold;
+  color: #556ee6;
+  margin: 0 5px;
+}
+
+.component--login .content .signup a:hover {
+  text-decoration: underline;
+}
+
+.component--login .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

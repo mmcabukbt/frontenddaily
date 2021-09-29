@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  color: #16232f;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f0f1f2;
+  padding: 0 50px;
+}
+
+.component--table {
+  margin-top: 10px;
+  padding: 40px 35px 55px;
+  background-color: white;
+  -webkit-box-shadow: 0 14px 24px -13px rgba(0, 4, 84, 0.2);
+          box-shadow: 0 14px 24px -13px rgba(0, 4, 84, 0.2);
+}
+
+.component--table table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.component--table table caption {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  text-align: left;
+}
+
+.component--table table .txt-left {
+  text-align: left;
+}
+
+.component--table table thead tr th {
+  border-bottom: 2px solid #eeeeee;
+  font-size: 16px;
+  color: #9c9c9f;
+  padding-bottom: 15px;
+}
+
+.component--table table tbody tr {
+  -webkit-transition: 400ms background-color ease;
+  transition: 400ms background-color ease;
+}
+
+.component--table table tbody tr td {
+  padding: 18px 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.component--table table tbody tr td .label {
+  margin-top: 5px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--table table tbody tr td .label::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: var(--color);
+}
+
+.component--table table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.component--table table tbody tr:hover {
+  background-color: #f4f4f4;
+}
+
+.component--table table tfoot tr td {
+  padding-top: 27px;
+}
+
+.component--table table tfoot tr td a {
+  height: 73px;
+  width: 220px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #444ce9;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.component--table table tfoot tr td a:hover {
+  background-color: #444ce9;
+  color: white;
+}
+
+.component--table table tfoot tr td a:hover svg {
+  -webkit-transition: 700ms all ease;
+  transition: 700ms all ease;
+  fill: white;
+}
+
+.component--notified {
+  margin-top: 10px;
+  padding: 40px 30px;
+  width: 313px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #444ce9;
+  -webkit-box-shadow: 0 20px 43px -1px rgba(0, 4, 84, 0.2);
+          box-shadow: 0 20px 43px -1px rgba(0, 4, 84, 0.2);
+}
+
+.component--notified h3 {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.component--notified p {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.component--notified a {
+  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+
+.component--notified a:hover {
+  background-color: #7278ee;
+}
+
+.component--user-card {
+  margin-top: 10px;
+  padding: 60px;
+  width: 338px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 0 20px 43px -1px rgba(0, 4, 84, 0.2);
+          box-shadow: 0 20px 43px -1px rgba(0, 4, 84, 0.2);
+  position: relative;
+}
+
+.component--user-card img {
+  width: 138px;
+  height: 138px;
+  margin-bottom: 15px;
+}
+
+.component--user-card .hour {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding-left: 23px;
+  font-size: 16x;
+  background: no-repeat 0 50%/20px url("img/schedule_black_24dp.svg");
+}
+
+.component--user-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.component--user-card div {
+  font-size: 16x;
+  margin-bottom: 35px;
+}
+
+.component--user-card a {
+  width: 100%;
+  font-size: 16px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  color: white;
+  background-color: #444ce9;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.component--user-card a:hover {
+  background-color: #1a24e0;
+}
+/*# sourceMappingURL=style.css.map */

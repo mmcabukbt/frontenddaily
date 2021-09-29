@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    // scroll-behavior: smooth;
+    &:focus {
+        outline: 0;
+    }
+}
+html, body {
+    height: 100%;
+    letter-spacing: -.3px;
+}
+
+body {
+ //   padding: 50px;
+    background: linear-gradient(to bottom right, #ff8be0, #ffe364);
+}
+
+.component {
+    background-color: white;
+    box-shadow: 0 32px 23px -25px rgba(#465da9, .33);
+    margin: 50px 10px;
+    border-radius: 5px;
+    h4 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1a2250;
+        margin-bottom: 40px;
+    }
+        
+    &--web1{
+        padding: 65px 65px 45px;
+        
+        ul {
+            display: flex;
+            margin: 0 -16px;
+            li {
+                a {
+                    display: block;
+                    padding: 20px 40px 20px 40px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #5f85ff;
+                    line-height: 31px;
+                    position: relative;
+                    border-radius: 12px;
+                    transition: 300ms background ease, 500ms color ease;
+                    background: no-repeat right 3px center url("./img/arrow_forward.svg");
+                    &::before {
+                        content: "";
+                        width: 4px;
+                        background:linear-gradient(to bottom, #8bcdff, #6487ff);
+                        border-radius: 2px;
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        bottom: 20px;                        
+                    }
+                    &:hover {
+                        background: no-repeat right url("./img/arrow_forward_hover.svg");
+                        color: #1a2250;
+                        background-color: #f6f8ff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .action {
+        display: inline-flex;
+        // background-color: red;
+        
+        a {
+            color: #6189ff;
+            font-size: 20px;
+            font-weight: 600;
+            background: no-repeat right 3px center url("./img/arrow_forward.svg");
+            // background: no-repeat right url("./img/arrow_forward_hover.svg");
+            padding-right: 35px;
+        }
+    }
+    &--web2 {
+        margin-top: 50px;
+        padding: 65px 75px;
+        max-width: 620px;
+        text-align: center;
+        p {
+            color:#1a2250;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 31px;
+            margin-top: -15px;
+            margin-bottom: 50px;
+        }
+    }
+    
+    &--web3 {
+        padding: 65px 140px 65px 60px;
+        max-width: 685px;
+        h4 {
+            font-size: 34px;
+        }
+        
+        p {
+            color:#1a2250;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31px;
+            margin-top: -5px;
+            margin-bottom: 40px;            
+        }
+
+        .str-btn {
+            display: inline-block;
+            text-align: center;
+            width: 260px;
+            height: 78px;
+            // border: 1px solid #f2f5ff;
+            margin-right: 40px;
+            border-radius: 78px;
+            background: linear-gradient(to bottom right, #8bcdff, #6487ff);
+            box-shadow: 0 22px 15px -20px #4f77bb;
+            transition: all 300ms ease;
+            a {
+                display: inline-block;
+                border-radius: 78px;
+                width: inherit;
+                height: inherit;
+                padding: 0 70px;
+                font-size: 20px;
+                font-weight: 500;
+                color:white;
+                line-height: 78px;
+            }
+            &:hover {
+                transform: scale(1.04);
+            }
+        }
+    }
+
+}

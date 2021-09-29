@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+$bg0_color: #f0f2fb;
+$bg1_color: #556ee6;
+$txt_color: #505b72;
+// $txt_color: #9b008e;
+$btn0_color: #637392;
+$btn1_color: #3457dc;
+$tbr_color: #eeeeee;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   &:focus {
+      outline: none;
+   }
+   color:$txt_color;
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+body {
+   background-color: $bg0_color;
+   height: 100vh;
+   @include f_orta_cc();
+}
+
+.component {
+   &--login {
+      .content {
+         width: 451px;
+         overflow: hidden;
+         user-select: none;
+         border-radius: 5px;
+         background-color:white;
+         box-shadow: 0 10px 36px -15px darken($bg1_color, 40);
+         header {
+            height: 112px;
+            padding: 24px;
+            background: rgba($bg1_color, .25) no-repeat right 50% url("img/login-image.svg");
+            h5 {
+               margin-bottom: 8px;
+               font-size: 17px;
+               font-weight: bold;
+               color: $bg1_color;
+            }
+            p {
+               font-size: 14px;
+               color: $bg1_color;
+            }
+         }
+         .user-avatar {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            img {
+               position: absolute;
+               width: 75px;
+               height: 75px;
+               left: 25px;
+               top: -25px;
+               border-radius: 50%;
+               border: 3px solid white;
+            }
+         }
+         form {
+            display: flex;
+            flex-direction: column;
+            padding: 24px 28px;
+            label {
+               font-size: 14px;
+               font-weight: bold;
+            }
+            .inputs {
+               display: flex;
+               flex-direction: column;
+               input {
+                  display: block;
+                  align-items: left;
+                  width: 100%;
+                  padding: 10px;
+                  margin: 5px 0 15px;
+                  border-radius: 4px;
+                  font-size: 14px;
+                  border: 1px solid #bbb;
+                  caret-color: $bg1_color;
+                  &::placeholder {
+                     font-size: 14px;
+                  }
+                  &:hover, &:focus {
+                     border-color: $bg1_color;
+                  }
+               }
+            }
+            .remember {
+               display: flex;
+               align-items: center;
+               input {
+                  cursor: pointer;
+                  appearance: none;
+                  width: 18px;
+                  height: 18px;
+                  border-radius: 4px;
+                  border: 1px solid #bbb;
+                  transition: 300ms all ease;
+                  background: no-repeat 50% 50% / 12px url("img/icon-check.svg");
+                  &:checked {
+                     background-color: $bg1_color;
+                  }
+                  &:hover {
+                     border-color: $bg1_color;
+                  }
+               }
+               label {
+                  padding: 0 8px;
+                  cursor: pointer;
+               }
+            }
+            .actions {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin-top: 20px;
+               button {
+                  width: 100%;
+                  height: 42px;
+                  font-size: 14px;
+                  font-weight: bold;
+                  border-radius: 5px;
+                  background-color: $bg1_color;
+                  color: white;
+                  cursor: pointer;
+                  transition: 300ms all ease;
+                  &:hover {
+                     transform: translateY(-1px);
+                     background-color: darken($bg1_color, 10);
+                     box-shadow: 0 5px 16px -5px darken($bg1_color, 90);
+                  }
+               }
+               a {
+                  margin-top: 15px;
+                  padding-left: 20px;
+                  width: 100%;
+                  height: 40px;
+                  line-height: 40px;
+                  text-align: center;
+                  font-size: 14px;
+                  font-weight: bold;
+                  border-radius: 40px;
+                  background: no-repeat 28% 50% / 14px url("img/icon-lock.svg");
+                  transition: 300ms all ease;
+                  &:hover {
+                     transform: translateY(-1px);
+                     background-color: rgba($bg1_color, .25);
+                  }
+               }
+            }
+      }
+      .signup {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 15px 0;
+         font-size: 14px;
+         a {
+            font-weight: bold;
+            color: $bg1_color;
+            margin: 0 5px;
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+   .copyright {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 12px;
+      width: 100%;
+   }
+   } 
+}

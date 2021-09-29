@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$bg0_color: #f7f9fd;
+$bg1_color: white;
+$txt_color: #1f232b;
+// $txt_color: #9b008e;
+$btn0_color: #5d6980;
+$btn1_color: #3457dc;
+$tbr_color: #eeeeee;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+   &:focus {
+      outline: none;
+   }
+   color:$txt_color;
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+}
+
+.component {
+   &--feedback {
+      margin-top: 10px;
+      background-color: white;
+      padding: 30px 25px;
+      box-shadow: 0 24px 27px -15px rgba(#3457dc, .2);
+      position: fixed;
+      transition: 300ms all ease;
+      
+      &.style1 {
+         width: 380px;
+      }
+      &.hide {
+         opacity: 0;
+         visibility: hidden;
+         transform: scale(.5);
+      }
+      
+      &.position-bc {
+         bottom: 20px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+      &.position-bl {
+         bottom: 20px;
+         left: 20px;
+      }
+      &.position-br {
+         bottom: 20px;
+         right: 20px;
+      }
+      &.position-tc {
+         top: 20px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+      &.position-tl {
+         top: 20px;
+         left: 20px;
+      }
+      &.position-tr {
+         top: 20px;
+         right: 20px;
+      }
+      &.position-cc {
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+      .close-btn {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         padding: 5px 10px;
+         border-radius: 50%;
+         &:hover {
+            background-color: lighten($btn1_color, 42);
+         }
+      }
+      h6 {
+         text-align: center;
+         font-size: 16px;
+         font-weight: bold;
+         padding: 25px 15px;
+      }
+      input {
+         display: none;
+      }            
+      .labels {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         margin-bottom: 25px;
+         &.with-icons {
+            li {
+               width: 90px;
+               height: 90px;
+               padding: 15px;
+               border-radius: 10px;
+               cursor: pointer;
+               transition: 300ms box-shadow ease;
+               &.show {
+                  background-color: rgb(255, 251, 210);
+                  box-shadow: 0 4px 10px -2px rgba(#c79019, .3);
+               }
+               &:hover {
+                  box-shadow: 0 4px 10px -2px rgba(#3457dc, .3);
+               }
+            }
+         }
+         &.with-numbers {
+            position: relative;
+            margin-bottom: 35px;
+            user-select: none;
+            li {
+               padding: 10px 15px;
+               border-radius: 5px;
+               margin: 0 4px;
+               cursor: pointer;
+               transition: 300ms box-shadow ease;
+               font-size: 16px;
+               font-weight: bold;
+               &.show {
+                  background-color: rgb(255, 251, 210);
+                  box-shadow: 0 4px 10px -2px rgba(#c79019, .3);
+               }
+               &:hover {
+                  box-shadow: 0 4px 10px -2px rgba(#3457dc, .3);
+               }
+            }
+            &::before {
+               content: "Not likely at all";
+               position: absolute;
+               top: 45px;
+               left: 0;
+               font-size: 12px;
+            }
+            &::after {
+               content: "Extremely likely";
+               position: absolute;
+               top: 45px;
+               right: 0;
+               font-size: 12px;
+            }
+         }
+      }
+      .meter {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+      .message {
+         height: 0;
+         overflow: hidden;
+         transition: 300ms height ease;
+         &.show-msg {
+            height: 122px;
+         }
+         p {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+         }
+         textarea {
+            width: 100%;
+            height: 70px;
+            padding: 8px;
+            font-size: 12px;
+            border-radius: 5px;
+            border: 1px solid #dcdff1;
+            resize: none;
+            &::placeholder {
+               color: rgb(255, 175, 71);
+            }
+            &:hover, &:focus {
+               border-color: rgb(255, 175, 71);
+               caret-color: rgb(255, 175, 71);
+            }
+         }
+      }
+      .actions {
+         @include f_orta_sb;
+         font-size:14px;
+         a {
+            color: $btn0_color;
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+         button {
+            height: 40px;
+            border-radius: 5px;
+            padding: 0 20px;
+            font-size:14px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            background-color: $btn1_color;
+            transition: 400ms background-color ease;
+            &:hover {
+               background-color: darken($btn1_color, 10);
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800;900&display=swap');
+
+$bg0_color: #001d93;
+// $br1_color: #10182f;
+// $br2_color: white;
+
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   font-weight: 600;
+   &:focus {
+      outline: none;
+   }
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: rgba($bg0_color, .05);
+   margin: 10px 30px 50px;
+}
+
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.cookie-banner {
+   box-shadow: 0 15px 45px -12px rgba($bg0_color, .4);
+   border-radius: 5px;
+   $br1_color: #10182f;
+   $br2_color: white;
+   // &.dark {
+   //    $br2_color: #10182f;
+   //    $br1_color: white;
+   // }
+   user-select: none;
+   &.style1 {
+      background-color: $br2_color;
+      margin: 10px;
+      width: 410px;
+      height: 196px;
+      padding: 35px 35px 25px;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(.4);
+      transition: 500ms all ease;
+      &.show {
+         transform: scale(1);
+         visibility: visible;
+         opacity: 1;
+      }
+      p {
+         display: block;
+         line-height: 25px;
+         color: $br1_color;
+         a {
+            color: $br1_color;
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+      .actions {
+         display: flex;
+         justify-content: flex-end;
+         margin-top: 25px;
+         a {
+            height: 36px;
+            @include f_orta_cc;
+            padding: 0 20px;
+            border-radius: 5px;
+            color: $br1_color;
+            transition: 300ms box-shadow ease;
+            &.alw-btn {
+               margin-left: 10px;
+               background-color: $br1_color;
+               color: $br2_color;
+            }
+            &:hover {
+               box-shadow: 1px 5px 14px -3px rgba($br1_color, .6);
+            }
+         }
+      }
+   }
+   
+   &.style2 {
+      $br1_color: #10182f;
+      $br2_color: white;
+      background-color: $br2_color;
+      margin: 10px;
+      width: 410px;
+      height: 304px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 39px 40px 35px;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(.4);
+      transition: 500ms all ease;
+      &.show {
+         transform: scale(1);
+         visibility: visible;
+         opacity: 1;
+      }
+      img {
+         width: 48px;
+         height: 48px;
+      }
+      p {
+         display: block;
+         line-height: 25px;
+         color: $br1_color;
+         a {
+            color: $br1_color;
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+      .actions {
+         display: flex;
+         justify-content: flex-end;
+         margin-top: 25px;
+         a {
+            height: 50px;
+            width: 110px;
+            @include f_orta_cc;
+            border-radius: 5px;
+            color: $br1_color;
+            transition: 300ms box-shadow ease;
+            &.alw-btn {
+               margin-left: 10px;
+               background-color: $br1_color;
+               color: $br2_color;
+            }
+            &:hover {
+               box-shadow: 1px 5px 14px -3px rgba($br1_color, .6);
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Mulish:wght@400;700;900&display=swap');
+
+html {
+    font-family: 'Mulish', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    // scroll-behavior: smooth;
+    &:focus {
+        outline: 0;
+    }
+}
+html, body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+body {
+    background-color: #f2f2f2;
+}
+
+$renk1: #874285;
+$renk2: #242e4c;
+$renk3: #d8dbe6;
+$renk4: #8d8f94;
+$renk5: #f3488c;
+
+input:checked + .popup {
+    display: flex;
+}
+
+.popup-open-btn {
+    border: 2px solid $renk5;
+    padding: 0 40px;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: 900;
+    color: $renk5;
+    cursor: pointer;
+}
+.popup {
+    position: fixed;
+    top: 0;    
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.settings-popup {
+    background-color: white;
+    padding: 85px 100px;
+    border-radius: 15px;
+    width: 912px;
+    box-shadow: 0 67px 55px -34px $renk4;
+    position: relative;
+    .close-btn {
+        z-index: 20;
+        cursor: pointer;
+        display: inline-flex;
+        position: absolute;
+        right:30px;
+        top: 30px;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $renk4;
+        background: no-repeat 50% 50%/35px url("close_black_24dp.svg");
+        &::after {
+            content:"Close";
+            position: absolute;
+            top: 35px;
+            right: 7px;
+        }
+        &:hover {
+            color:$renk1;
+            background-color: rgb(255, 128, 128);
+        }
+    }
+    h2 {
+        font-weight: 900;
+        font-size: 28px;
+        color: $renk1;
+        margin-bottom: 55px;
+    }
+    ul {
+        li {
+            margin: 40px 0;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            &:last-child {
+                margin-bottom: 0;             
+            }
+            .set-item {
+                h4 {
+                    font-weight: 900;
+                    font-size: 20px;
+                    color: $renk1;
+                    margin-bottom: 13px;
+                }
+                select {
+                    margin-top: 35px;
+                    width: 330px;
+                    height: 50px;
+                    border: 2px solid $renk4;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    padding: 0 15px;
+                    color:$renk2;
+                    cursor: pointer;
+                    appearance: none;
+                    background: no-repeat 95% /40px url("arrow_drop_down_black_24dp.svg");
+                    &:hover {
+                        border-color: $renk1;
+                    }
+                }
+                p {
+                    font: size 16px;
+                    color: $renk2;
+                    line-height: 22px;
+                }
+            }
+            .chklabel {
+                position: relative;
+                width: 54px;
+                height: 28px;
+                border-radius: 30px;
+                border:2px solid $renk3;
+                // background-color: $renk3;
+                cursor: pointer;
+                
+                .checkbox {
+                    transition: transform 300ms ease, background-color 300ms ease;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 20px;
+                    background-color: $renk4;
+                }
+                input {
+                    display: none;
+                    &:checked + .checkbox {
+                        transform: translateX(26px);
+                        background-color: $renk1;
+                    } 
+                }
+            }
+        }
+    }
+    hr {
+        height: 1px;
+        background-color: $renk3;
+        margin: 45px 0;
+    }
+
+    .actions {
+        display:flex;
+        margin-top: 55px;
+        align-items: center;
+        a {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $renk3;
+            border-radius: 6px;
+            height: 54px;
+            width: 161px;
+            margin-right: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color:$renk1;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                border-color: $renk1;
+            }
+        }
+        .active {
+            background-color: $renk5;
+            border: 2px solid $renk5;
+            color:white;
+        }
+    }
+}

@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;800&display=swap');
+
+$bg0_color: #f1e8e6;
+$bg1_color: white;
+$shd_color: #f55951;
+$br1_color: #fd6a50;
+// $txt_color: #9b008e;
+$txt_color: #111127;
+$br2_color: #f3d6cd;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Mulish', sans-serif;
+   &:focus {
+      outline: none;
+   }
+   font-weight: 400;
+   color:$txt_color;
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   padding: 0 50px;
+}
+
+.component {
+   &--recipe-1 {
+      margin-top: 10px;
+      width: 467px;
+      padding: 40px;
+      border-radius: 15px;
+      background-color: $bg1_color;
+      box-shadow: 0 15px 30px -25px $shd_color;
+      ul {
+         display: flex;
+         justify-content: space-between;
+         li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            img {
+               margin-right: 8px;
+            }
+         }
+      }
+   }
+   &--recipe-2 {
+      margin-top: 10px;
+      width: 353px;
+      padding: 40px;
+      border-radius: 15px;
+      background-color: $bg1_color;
+      box-shadow: 0 20px 40px -35px $shd_color;
+      h4 {
+         font-size: 16px;
+         font-weight: bold;
+         margin-bottom: 20px;
+      }
+      ul {
+         display: flex;
+         justify-content: space-between;
+         li {
+            height: 42px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 30px;
+            border: 1px solid $br2_color;
+            background-color: rgba($br2_color, .3);
+            transition: 300ms all ease;
+            cursor: pointer;
+            &:hover, &.active {
+               background-color: $br1_color;
+               color: $bg1_color;
+               transform: translateY(-1px);
+               box-shadow: 2px 5px 14px -5px $shd_color;
+            }
+         }
+      }
+   }
+   &--recipe-3 {
+      margin-top: 10px;
+      width: 420px;
+      padding: 40px;
+      border-radius: 20px;
+      background-color: $br1_color;
+      box-shadow: 0 20px 40px -35px $shd_color;
+      h3 {
+         font-size: 22px;
+         font-weight: bold;
+         margin-bottom: 20px;
+         color: $bg1_color;
+      }
+      input {
+         height: 60px;
+         width: 100%;
+         font-size: 16px;
+         border-radius: 10px;
+         padding: 0 20px 0 55px;
+         caret-color: $br1_color;
+         background: white no-repeat 18px 53% / 26px url("img/icon-search.svg");
+         &::placeholder {
+            color: darken($br2_color, 20);
+         }
+      }
+   }
+   &--recipe-4 {
+      margin-top: 10px;
+      width: 345px;
+      border-radius: 20px;
+      background-color: $bg1_color;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -35px $shd_color;
+      .cover {
+         height: 180px;
+         img {
+            object-fit: cover;
+            width: 100%;
+         }
+      }
+      .card {
+         padding: 30px 30px 40px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         h4 {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+         }
+         h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+         }
+         form {
+            input {
+               width: 100%;
+               height: 60px;
+               font-size: 16px;
+               border-radius: 8px;
+               border: 1px solid $br2_color;
+               padding: 0 20px;
+               caret-color: $br1_color;
+               background: white;
+               margin-bottom: 10px;
+               &::placeholder {
+                  color: darken($br2_color, 20);
+               }
+               &:hover, &:focus {
+                  border-color: $br1_color;
+               }
+            }
+            button {
+               width: 100%;
+               height: 60px;
+               border-radius: 8px;
+               font-size: 18px;
+               background-color: $br1_color;
+               color: $bg1_color;
+               margin-bottom: 30px;
+               transition: 300ms all ease;
+               cursor: pointer;
+               &:hover {
+                  transform: translateY(-2px);
+                  box-shadow: 2px 4px 13px -2px $shd_color;
+               }
+            }
+         }
+         span {
+            font-size: 14px;
+         }
+      }
+   }
+   &--recipe-5 {
+      display: flex;
+      margin-top: 10px;
+      width: 625px;
+      border-radius: 20px;
+      background-color: $bg1_color;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -35px $shd_color;
+      padding: 20px;
+      .cover {
+         min-width: 180px;
+         width: 180px;
+         height: 250px;
+         margin-right: 30px;
+         border-radius: 10px;
+         overflow: hidden;
+         img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+         }
+      }
+      .content {
+         position: relative;
+         .favorite-btn {
+            position: absolute;
+            @include g_ortala;
+            top: 0;
+            right: 0;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            border: 1px solid $br2_color;
+            &:hover, &.active{
+               background-color: $br1_color;
+               border-radius: 50%;
+               box-shadow: 1px 1px 10px darken($shd_color, 20);
+               svg path {
+                  stroke: white;
+               }
+            }
+         }
+         .title {
+            display: flex;
+            h3 {
+               font-size: 22px;
+               font-weight: bold;
+               margin: 20px 0;
+               &:hover {
+                  color:$br1_color;
+                  text-shadow: 0px -1px 1px lighten($txt_color, 70);
+               }
+            }
+         }
+         p {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0 40px 20px 0;
+         }
+         .stars {
+            user-select: none;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            width: 150px;
+            height: 20px;
+            input {
+               position: relative;
+               appearance: none;
+               cursor: pointer;
+               margin-top: -20px;
+               transition: 500ms all ease;
+               &::before {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  content: url("./img/icon-star-passive.svg");
+               }
+               &::after {
+                  visibility: hidden;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  content: url("./img/icon-star.svg");
+               }
+            }
+            & #rs5:checked {
+               &::after, +#rs4::after, +#rs4+#rs3::after, +#rs4+#rs3+#rs2::after, +#rs4+#rs3+#rs2+#rs1::after {
+                  visibility: visible;
+               }
+            } 
+            & #rs4:checked {
+               &::after, +#rs3::after, +#rs3+#rs2::after, +#rs3+#rs2+#rs1::after {
+                  visibility: visible;
+               }
+            } 
+            & #rs3:checked {
+               &::after, +#rs2::after, +#rs2+#rs1::after {
+                  visibility: visible;
+               }
+            } 
+            & #rs2:checked {
+               &::after, +#rs1::after {
+                  visibility: visible;
+               }
+            } 
+            & #rs1:checked {
+               &::after {
+                  visibility: visible;
+               }
+            } 
+            
+            span {
+               margin-left: 10px;
+            }
+         }
+      }
+               // content: attr(data-act);
+   }
+   &--recipe-6 {
+      border-radius: 20px;
+      margin-top: 10px;
+      padding: 40px 84px;
+      width: 993px;
+      background-color: white;
+      position: relative;
+      box-shadow: 0 20px 40px -35px $shd_color;
+      .next-btn, .prev-btn {
+         position: absolute;
+         top: 40%;
+         width: 44px;
+         height: 44px;
+         @include g_ortala();
+         border-radius: 50%;
+         transition: 300ms background-color ease;
+         &:hover{
+            background-color: $br2_color;
+         }
+         &.swiper-button-disabled {
+            opacity: .3;
+            &:hover img{
+               transform: none;
+            }
+         }
+      }
+      .prev-btn {
+         left: 20px;
+         &:hover img{
+            transition: 300ms transform ease;
+            transform: translateX(-10px);
+         }
+      }
+      .next-btn {
+         right: 20px;
+         &:hover img{
+            transition: 300ms transform ease;
+            transform: translateX(10px);
+         }
+      }
+      .swiper-slide {
+         .card {
+            a {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+               border-radius: 15px;
+               background-color: white;
+               padding: 23px;
+               border: 2px solid transparent;
+               font-size: 14px;
+               line-height: 20px;
+               transition: 400ms border-color ease;
+               img{
+                  width: 91px;
+                  height: 91px;
+                  border-radius: 50%;
+                  margin-bottom: 17px;
+               }
+               &:hover {
+                  border-color: $br2_color;
+               }
+            }
+         }
+      }
+      
+   }
+}

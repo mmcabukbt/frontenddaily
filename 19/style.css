@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  color: #1f232b;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f7f9fd;
+}
+
+.component--feedback {
+  margin-top: 10px;
+  background-color: white;
+  padding: 30px 25px;
+  -webkit-box-shadow: 0 24px 27px -15px rgba(52, 87, 220, 0.2);
+          box-shadow: 0 24px 27px -15px rgba(52, 87, 220, 0.2);
+  position: fixed;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.component--feedback.style1 {
+  width: 380px;
+}
+
+.component--feedback.hide {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.component--feedback.position-bc {
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.component--feedback.position-bl {
+  bottom: 20px;
+  left: 20px;
+}
+
+.component--feedback.position-br {
+  bottom: 20px;
+  right: 20px;
+}
+
+.component--feedback.position-tc {
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.component--feedback.position-tl {
+  top: 20px;
+  left: 20px;
+}
+
+.component--feedback.position-tr {
+  top: 20px;
+  right: 20px;
+}
+
+.component--feedback.position-cc {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.component--feedback .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.component--feedback .close-btn:hover {
+  background-color: #ebeefc;
+}
+
+.component--feedback h6 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 25px 15px;
+}
+
+.component--feedback input {
+  display: none;
+}
+
+.component--feedback .labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+
+.component--feedback .labels.with-icons li {
+  width: 90px;
+  height: 90px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms box-shadow ease;
+  transition: 300ms box-shadow ease, 300ms -webkit-box-shadow ease;
+}
+
+.component--feedback .labels.with-icons li.show {
+  background-color: #fffbd2;
+  -webkit-box-shadow: 0 4px 10px -2px rgba(199, 144, 25, 0.3);
+          box-shadow: 0 4px 10px -2px rgba(199, 144, 25, 0.3);
+}
+
+.component--feedback .labels.with-icons li:hover {
+  -webkit-box-shadow: 0 4px 10px -2px rgba(52, 87, 220, 0.3);
+          box-shadow: 0 4px 10px -2px rgba(52, 87, 220, 0.3);
+}
+
+.component--feedback .labels.with-numbers {
+  position: relative;
+  margin-bottom: 35px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.component--feedback .labels.with-numbers li {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 4px;
+  cursor: pointer;
+  -webkit-transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms -webkit-box-shadow ease;
+  transition: 300ms box-shadow ease;
+  transition: 300ms box-shadow ease, 300ms -webkit-box-shadow ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.component--feedback .labels.with-numbers li.show {
+  background-color: #fffbd2;
+  -webkit-box-shadow: 0 4px 10px -2px rgba(199, 144, 25, 0.3);
+          box-shadow: 0 4px 10px -2px rgba(199, 144, 25, 0.3);
+}
+
+.component--feedback .labels.with-numbers li:hover {
+  -webkit-box-shadow: 0 4px 10px -2px rgba(52, 87, 220, 0.3);
+          box-shadow: 0 4px 10px -2px rgba(52, 87, 220, 0.3);
+}
+
+.component--feedback .labels.with-numbers::before {
+  content: "Not likely at all";
+  position: absolute;
+  top: 45px;
+  left: 0;
+  font-size: 12px;
+}
+
+.component--feedback .labels.with-numbers::after {
+  content: "Extremely likely";
+  position: absolute;
+  top: 45px;
+  right: 0;
+  font-size: 12px;
+}
+
+.component--feedback .meter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component--feedback .message {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 300ms height ease;
+  transition: 300ms height ease;
+}
+
+.component--feedback .message.show-msg {
+  height: 122px;
+}
+
+.component--feedback .message p {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.component--feedback .message textarea {
+  width: 100%;
+  height: 70px;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #dcdff1;
+  resize: none;
+}
+
+.component--feedback .message textarea::-webkit-input-placeholder {
+  color: #ffaf47;
+}
+
+.component--feedback .message textarea:-ms-input-placeholder {
+  color: #ffaf47;
+}
+
+.component--feedback .message textarea::-ms-input-placeholder {
+  color: #ffaf47;
+}
+
+.component--feedback .message textarea::placeholder {
+  color: #ffaf47;
+}
+
+.component--feedback .message textarea:hover, .component--feedback .message textarea:focus {
+  border-color: #ffaf47;
+  caret-color: #ffaf47;
+}
+
+.component--feedback .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.component--feedback .actions a {
+  color: #5d6980;
+}
+
+.component--feedback .actions a:hover {
+  text-decoration: underline;
+}
+
+.component--feedback .actions button {
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background-color: #3457dc;
+  -webkit-transition: 400ms background-color ease;
+  transition: 400ms background-color ease;
+}
+
+.component--feedback .actions button:hover {
+  background-color: #2141bd;
+}
+/*# sourceMappingURL=style.css.map */
