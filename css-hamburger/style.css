@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+}
+
+html, body {
+  height: 70%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.hamburger-menu {
+  --height: 10px;
+  --space: calc(var(--height) * 2.5);
+  --animation-time: .25s;
+  --animation-curve: ease;
+  width: calc(var(--space) * 4);
+  height: calc(var(--height) * 6);
+  background: #eee;
+  -webkit-transition: var(--animation-time) var(--animation-time) background-color var(--animation-curve);
+  transition: var(--animation-time) var(--animation-time) background-color var(--animation-curve);
+  cursor: pointer;
+}
+
+.hamburger-menu span, .hamburger-menu span::before, .hamburger-menu span::after {
+  content: '';
+  display: block;
+  height: var(--height);
+  width: 100%;
+  background: #222;
+}
+
+.hamburger-menu span {
+  -webkit-transform: translateY(var(--space));
+          transform: translateY(var(--space));
+  -webkit-transition: var(--animation-time) var(--animation-time) background-color var(--animation-curve);
+  transition: var(--animation-time) var(--animation-time) background-color var(--animation-curve);
+}
+
+.hamburger-menu span::before {
+  position: absolute;
+  bottom: var(--space);
+  -webkit-transition: var(--animation-time) transform var(--animation-curve), var(--animation-time) var(--animation-time) bottom var(--animation-curve);
+  transition: var(--animation-time) transform var(--animation-curve), var(--animation-time) var(--animation-time) bottom var(--animation-curve);
+}
+
+.hamburger-menu span::after {
+  position: absolute;
+  top: var(--space);
+  -webkit-transition: var(--animation-time) transform var(--animation-curve), var(--animation-time) var(--animation-time) top var(--animation-curve);
+  transition: var(--animation-time) transform var(--animation-curve), var(--animation-time) var(--animation-time) top var(--animation-curve);
+}
+
+#menu-toggle:checked + .hamburger-menu {
+  background-color: tomato;
+}
+
+#menu-toggle:checked + .hamburger-menu span {
+  background: transparent;
+}
+
+#menu-toggle:checked + .hamburger-menu span::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0;
+  -webkit-transition: var(--animation-time) var(--animation-time) transform var(--animation-curve), var(--animation-time) bottom var(--animation-curve);
+  transition: var(--animation-time) var(--animation-time) transform var(--animation-curve), var(--animation-time) bottom var(--animation-curve);
+}
+
+#menu-toggle:checked + .hamburger-menu span::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+  -webkit-transition: var(--animation-time) var(--animation-time) transform var(--animation-curve), var(--animation-time) top var(--animation-curve);
+  transition: var(--animation-time) var(--animation-time) transform var(--animation-curve), var(--animation-time) top var(--animation-curve);
+}
+/*# sourceMappingURL=style.css.map */

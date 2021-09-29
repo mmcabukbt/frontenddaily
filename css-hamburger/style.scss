@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+html, body {
+    height: 70%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.hamburger-menu {
+    --height: 10px;
+    --space: calc(var(--height) * 2.5);
+    --animation-time: .25s;
+    --animation-curve: ease;
+    width: calc(var(--space) * 4);
+    height: calc(var(--height) * 6);
+    background: #eee;
+    transition: var(--animation-time) var(--animation-time) background-color var(--animation-curve);
+    cursor: pointer;
+    span, span::before, span::after {
+        content: '';
+        display: block;
+        height: var(--height);
+        width: 100%;
+        background: #222;
+    }
+    span {
+        transform: translateY(var(--space));
+        transition: var(--animation-time) var(--animation-time) background-color var(--animation-curve);
+ 
+        &::before {
+            position: absolute;
+            bottom: var(--space);
+            transition:  var(--animation-time) transform var(--animation-curve), var(--animation-time) var(--animation-time) bottom var(--animation-curve);
+        }
+        &::after {
+            position: absolute;
+            top: var(--space) ;
+            transition:  var(--animation-time) transform var(--animation-curve), var(--animation-time) var(--animation-time) top var(--animation-curve) ;
+        }
+    }
+}
+
+#menu-toggle {
+    // display: none;
+    &:checked + .hamburger-menu {     
+        background-color: tomato;
+        span {
+            background: transparent;            
+        
+            &::before {
+                transform: rotate(-45deg);
+                bottom: 0;
+                transition: var(--animation-time) var(--animation-time) transform var(--animation-curve), var(--animation-time) bottom var(--animation-curve);
+            }
+            &::after {
+                transform: rotate(45deg);
+                top: 0;
+                transition: var(--animation-time) var(--animation-time) transform var(--animation-curve), var(--animation-time) top var(--animation-curve) ;
+            }
+        }
+    }
+}
