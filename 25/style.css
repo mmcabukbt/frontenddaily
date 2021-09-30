@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  color: #111127;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f0f2fa;
+  padding: 0 50px;
+}
+
+.component {
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 45px -30px #132c76;
+          box-shadow: 0 10px 45px -30px #132c76;
+}
+
+.component.component1 {
+  padding: 80px;
+  max-width: 950px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component.component1 > img {
+  margin-right: 40px;
+  width: 302px;
+  height: 232px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.component.component1 h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.component.component1 .author {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #1a1b38;
+}
+
+.component.component1 .author a:hover {
+  color: royalblue;
+  text-decoration: underline;
+}
+
+.component.component1 .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component.component1 .actions a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 63px;
+  padding: 10px 27px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #cccccc;
+  -webkit-transition: 300ms border-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms border-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms transform ease, 300ms border-color ease, 300ms box-shadow ease;
+  transition: 300ms transform ease, 300ms border-color ease, 300ms box-shadow ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+}
+
+.component.component1 .actions a:hover {
+  border-color: royalblue;
+  -webkit-box-shadow: 0 10px 25px -10px #132c76;
+          box-shadow: 0 10px 25px -10px #132c76;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  color: royalblue;
+}
+
+.component.component1 .actions a img {
+  margin-right: 10px;
+}
+
+.component.component2 {
+  width: 382px;
+  padding: 50px 60px;
+}
+
+.component.component2 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.component.component2 ul li {
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component.component2 ul li label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  min-height: 40px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.component.component2 ul li label:hover {
+  color: royalblue;
+}
+
+.component.component2 ul li label input {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 7px;
+  border: 1px solid #cccccc;
+  position: relative;
+  -webkit-transition: 300ms border-color ease;
+  transition: 300ms border-color ease;
+}
+
+.component.component2 ul li label input::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  -webkit-transition: 300ms background-color ease, 300ms border-color ease;
+  transition: 300ms background-color ease, 300ms border-color ease;
+}
+
+.component.component2 ul li label input:hover {
+  border-color: royalblue;
+}
+
+.component.component2 ul li label input:checked {
+  border-color: royalblue;
+}
+
+.component.component2 ul li label input:checked::before {
+  background-color: royalblue;
+}
+
+.component.component2 .action {
+  margin-top: 30px;
+}
+
+.component.component2 .action button {
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid royalblue;
+  color: white;
+  background-color: royalblue;
+  -webkit-transition: 300ms background-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms background-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms background-color ease, 300ms transform ease, 300ms box-shadow ease;
+  transition: 300ms background-color ease, 300ms transform ease, 300ms box-shadow ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+}
+
+.component.component2 .action button:hover {
+  background-color: #1d44b8;
+  -webkit-box-shadow: 0 10px 25px -10px #132c76;
+          box-shadow: 0 10px 25px -10px #132c76;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.component.component3 {
+  width: 510px;
+  padding: 50px 60px;
+}
+
+.component.component3 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.component.component3 ul {
+  padding: 20px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.component.component3 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 7px;
+}
+
+.component.component3 ul li a {
+  font-size: 16px;
+  padding: 5px 17px;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  -webkit-transition: 300ms background-color ease, 300ms -webkit-transform ease;
+  transition: 300ms background-color ease, 300ms -webkit-transform ease;
+  transition: 300ms background-color ease, 300ms transform ease;
+  transition: 300ms background-color ease, 300ms transform ease, 300ms -webkit-transform ease;
+}
+
+.component.component3 ul li:last-child a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: royalblue;
+  background-color: #e0e6fa;
+}
+
+.component.component3 ul li:last-child a img {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+.component.component3 ul li:hover a {
+  background-color: #e0e6fa;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.component.component3 .sub {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component.component3 .sub .subtitle h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=style.css.map */
