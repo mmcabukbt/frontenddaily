@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <div id="modal-btn" onclick="handleClick()">Show Modal</div>
+   <div class="feedback-modal">
+      <a href="#" class="close-btn" onclick="handleClick()">
+         <img src="img/icon-close.svg" alt="">
+      </a>
+      <h3>Give Feedback</h3>
+      <ul class="feedback-qlist">
+         <li>
+            <label class="title">What do you think of the editing tool?</label>
+            <ul class="feedback-rate">
+               <li>
+                  <label>
+                     <input type="radio" name="rd-rate" value="-2">
+                     <span class="rate r1">
+                        <img src="img/icon1.svg" alt="">
+                     </span>
+                  </label>
+               </li>
+               <li>
+                  <label>
+                     <input type="radio" name="rd-rate" value="-1">
+                     <span class="rate r2">
+                        <img src="img/icon2.svg" alt="">
+                     </span>
+                  </label>
+               </li>
+               <li>
+                  <label>
+                     <input checked type="radio" name="rd-rate" value="-0">
+                     <span class="rate">
+                        <img src="img/icon3.svg" alt="">
+                     </span>
+                  </label>
+               </li>
+               <li>
+                  <label>
+                     <input type="radio" name="rd-rate" value="1">
+                     <span class="rate r4">
+                        <img src="img/icon4.svg" alt="">
+                     </span>
+                  </label>
+               </li>
+               <li>
+                  <label>
+                     <input type="radio" name="rd-rate" value="2">
+                     <span class="rate r5">
+                        <img src="img/icon5.svg" alt="">
+                     </span>
+                  </label>
+               </li>
+
+            </ul>
+         </li>
+         <li>
+            <label class="title">Do you have any thoughts you'd like to share?</label>
+            <textarea name="" id="" cols="30" rows="10" placeholder="I think that..."></textarea>
+         </li>
+         <li>
+            <label class="title">May we follow you up on your feedback?</label>
+            <div class="follow">
+               <label>
+                  <input checked type="radio" name="rd2">Yes
+               </label>
+               <label>
+                  <input type="radio" name="rd2">No
+               </label>
+            </div>
+         </li>
+         <li>
+            <div class="actions">
+               <button type="button">Cancel</button>
+               <button type="submit">Send</button>
+            </div>
+         </li>
+      </ul>
+   </div>
+
+   <script>
+      const handleClick = () => {
+         const close_btn = document.getElementById("modal-btn");
+
+         document.getElementsByClassName("feedback-modal")[0].classList.toggle("show");
+
+      }
+   </script>
+</body>
+
+</html>

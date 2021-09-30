@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Merriweather:wght@700&display=swap');
+
+$bg0_color: #eaedfa;
+$br1_color: royalblue;
+$br2_color: #ffbc40;
+$br3_color: #181d39;
+// $txt_color: #9b008e;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'IBM Plex Sans', sans-serif;
+   &:focus {
+      outline: none;
+   }
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+body {
+   background-color: $bg0_color;
+   height: 100vh;
+}
+
+#modal-btn {
+   user-select: none;
+   @include f_orta_cc();
+   position: absolute;
+   left: 45%;
+   top: 48%;
+   cursor: pointer;
+   width: 140px;
+   height: 50px;
+   border-radius: 10px;
+   background-color: $br1_color;
+   color: white;
+   box-shadow: 0 10px 20px -8px $br3_color;
+}
+.feedback-modal {
+   user-select: none;
+   width: 567px;
+   left: 50%;
+   top: 50%;
+   padding: 75px 60px 50px;
+   border-radius: 15px;
+   background-color: white;
+   position: relative;
+   opacity: 0;
+   visibility: hidden;
+   transform: translate(-50%, -50%) scale(.5);
+   transition: 500ms all ease;
+   &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, -50%) scale(1);
+   }
+   
+   .close-btn{
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      width: 50px;
+      height: 50px;
+      @include f_orta_cc();
+      border-radius: 50%;
+      background-color: $bg0_color;
+      transition: 350ms background-color ease;
+      &:hover {
+         background-color: darken($bg0_color, 10);
+      }
+   }
+   h3 {
+      font-family: 'Merriweather', serif;
+      font-size: 22px;
+      margin-bottom: 20px;
+   }
+   .feedback-qlist {
+      display: flex;
+      flex-direction: column;
+      li {
+         margin-bottom: 30px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+         .title {
+            padding-bottom: 10px;
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+
+         }
+         textarea {
+            height: 150px;
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+            resize: none;
+            font-size: 15px;
+            caret-color: $br1_color;
+            &:hover, &:focus {
+               border-color: $br1_color;
+            }
+         }
+         .feedback-rate {
+            margin-top: 10px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            li {
+               label {
+                  position: relative;
+                  cursor: pointer;
+                  input {
+                     display: none;
+                     &:checked {
+                        +.rate {
+                           background-color: #f7eee0;
+                           &::before{
+                              background-color: $br2_color;
+                           }
+                           &.r1::before{
+                              background-color: #ff4040;
+                           }
+                           &.r2::before{
+                              background-color: #ff8640;
+                           }
+                           &.r4::before{
+                              background-color: #e2ff40;
+                           }
+                           &.r5::before{
+                              background-color: #50ff40;
+                           }
+                        }
+                     }
+                  }
+                  .rate{
+                     width: 76px;
+                     height: 76px;
+                     border-radius: 50%;
+                     @include f_orta_cc;
+                     position: relative;
+                     &::before {
+                        transition: 350ms box-shadow ease;
+                        position: absolute;
+                        content: '';
+                        left: 24px;
+                        top: 24px;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                     }
+                     &:hover {
+                        // background-color: #fce7c1;
+                        &::before {
+                           box-shadow: 0 0px 25px 20px $br2_color;
+                        }
+                     }
+                  }
+                  img {
+                     z-index: 5;
+                  }
+               }
+            }
+         }
+         .follow {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            label {
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+               margin-right: 50px;
+               font-size: 16px;
+               input {
+                  cursor: pointer;
+                  margin-right: 15px;
+                  appearance: none;
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                  border: 1px solid #cccccc;
+                  position: relative;
+                  transition: 300ms background-color ease;
+                  &::before {
+                     position: absolute;
+                     content: '';
+                     width: 16px;
+                     height: 16px;
+                     left: 6px;
+                     top: 6px;
+                     border-radius: 50%;
+                     transition: 300ms background-color ease;
+                  }
+                  &:hover {
+                     background-color: darken($bg0_color, 10);
+                     // border-color: $br1_color;
+                  }
+                  &:checked {
+                     border-color: $br1_color;
+                     &::before{
+                        background-color: royalblue;
+                     }
+                  }
+               }
+            }
+         }
+         .actions {
+            @include f_orta_sb();
+            margin-top: 10px;
+            button {
+               cursor: pointer;
+               width: 48%;
+               height: 70px;
+               border-radius: 5px;
+               // border: 1px solid $br1_color;
+               font-size: 16px;
+               font-weight: 600;
+               transition: 300ms background-color ease, 300ms transform ease, 300ms box-shadow ease, 300ms color ease;
+               &:hover {
+                  background-color: $br1_color;
+                  box-shadow: 0 10px 20px -8px $br3_color;
+                  transform: translateY(-2px);
+                  color: white;
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Merriweather:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #eaedfa;
+  height: 100vh;
+}
+
+#modal-btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 45%;
+  top: 48%;
+  cursor: pointer;
+  width: 140px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: royalblue;
+  color: white;
+  -webkit-box-shadow: 0 10px 20px -8px #181d39;
+          box-shadow: 0 10px 20px -8px #181d39;
+}
+
+.feedback-modal {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 567px;
+  left: 50%;
+  top: 50%;
+  padding: 75px 60px 50px;
+  border-radius: 15px;
+  background-color: white;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transition: 500ms all ease;
+  transition: 500ms all ease;
+}
+
+.feedback-modal.show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.feedback-modal .close-btn {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: #eaedfa;
+  -webkit-transition: 350ms background-color ease;
+  transition: 350ms background-color ease;
+}
+
+.feedback-modal .close-btn:hover {
+  background-color: #c1caf0;
+}
+
+.feedback-modal h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.feedback-modal .feedback-qlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.feedback-modal .feedback-qlist li {
+  margin-bottom: 30px;
+}
+
+.feedback-modal .feedback-qlist li:last-child {
+  margin-bottom: 0;
+}
+
+.feedback-modal .feedback-qlist li .title {
+  padding-bottom: 10px;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.feedback-modal .feedback-qlist li textarea {
+  height: 150px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  resize: none;
+  font-size: 15px;
+  caret-color: royalblue;
+}
+
+.feedback-modal .feedback-qlist li textarea:hover, .feedback-modal .feedback-qlist li textarea:focus {
+  border-color: royalblue;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label {
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label input {
+  display: none;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label input:checked + .rate {
+  background-color: #f7eee0;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label input:checked + .rate::before {
+  background-color: #ffbc40;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label input:checked + .rate.r1::before {
+  background-color: #ff4040;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label input:checked + .rate.r2::before {
+  background-color: #ff8640;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label input:checked + .rate.r4::before {
+  background-color: #e2ff40;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label input:checked + .rate.r5::before {
+  background-color: #50ff40;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label .rate {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label .rate::before {
+  -webkit-transition: 350ms -webkit-box-shadow ease;
+  transition: 350ms -webkit-box-shadow ease;
+  transition: 350ms box-shadow ease;
+  transition: 350ms box-shadow ease, 350ms -webkit-box-shadow ease;
+  position: absolute;
+  content: '';
+  left: 24px;
+  top: 24px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label .rate:hover::before {
+  -webkit-box-shadow: 0 0px 25px 20px #ffbc40;
+          box-shadow: 0 0px 25px 20px #ffbc40;
+}
+
+.feedback-modal .feedback-qlist li .feedback-rate li label img {
+  z-index: 5;
+}
+
+.feedback-modal .feedback-qlist li .follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+
+.feedback-modal .feedback-qlist li .follow label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+  font-size: 16px;
+}
+
+.feedback-modal .feedback-qlist li .follow label input {
+  cursor: pointer;
+  margin-right: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  position: relative;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.feedback-modal .feedback-qlist li .follow label input::before {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  left: 6px;
+  top: 6px;
+  border-radius: 50%;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.feedback-modal .feedback-qlist li .follow label input:hover {
+  background-color: #c1caf0;
+}
+
+.feedback-modal .feedback-qlist li .follow label input:checked {
+  border-color: royalblue;
+}
+
+.feedback-modal .feedback-qlist li .follow label input:checked::before {
+  background-color: royalblue;
+}
+
+.feedback-modal .feedback-qlist li .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.feedback-modal .feedback-qlist li .actions button {
+  cursor: pointer;
+  width: 48%;
+  height: 70px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: 300ms background-color ease, 300ms color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms background-color ease, 300ms color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms background-color ease, 300ms transform ease, 300ms box-shadow ease, 300ms color ease;
+  transition: 300ms background-color ease, 300ms transform ease, 300ms box-shadow ease, 300ms color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+}
+
+.feedback-modal .feedback-qlist li .actions button:hover {
+  background-color: royalblue;
+  -webkit-box-shadow: 0 10px 20px -8px #181d39;
+          box-shadow: 0 10px 20px -8px #181d39;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
