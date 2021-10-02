@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+html {
+  font-family: 'Mulish', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  background-color: #303236;
+}
+
+.component--search {
+  background-color: #3d3f43;
+  border-radius: 5px;
+  padding: 40px 45px;
+}
+
+.component--search form {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.component--search form .search-icon {
+  position: absolute;
+  width: 53px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--search form .search-icon img {
+  height: 30px;
+  width: 30px;
+}
+
+.component--search form input {
+  height: 50px;
+  width: 100%;
+  background-color: #303236;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  caret-color: #2ccdea;
+  padding-left: 53px;
+}
+
+.component--search form input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--search form input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--search form input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--search form input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--search h6 {
+  font: size 12px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.component--search ul {
+  margin-top: 13px;
+  margin-bottom: -7px;
+}
+
+.component--search ul li a {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  padding: 7px 0;
+  font-weight: bold;
+}
+
+.component--search ul li a:hover {
+  color: #2ccdea;
+}
+
+.component--search ul li.active a {
+  color: #2ccdea;
+}
+
+.component--filter-search {
+  background-color: #3d3f43;
+  border-radius: 5px;
+}
+
+.component--filter-search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  padding: 14px;
+}
+
+.component--filter-search form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.component--filter-search form .input .search-icon {
+  width: 40px;
+  text-align: center;
+}
+
+.component--filter-search form .input .search-icon img {
+  height: 30px;
+  width: 30px;
+}
+
+.component--filter-search form .input input {
+  height: 40px;
+  width: 100%;
+  padding: 0 5px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  caret-color: #2ccdea;
+}
+
+.component--filter-search form .input input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--filter-search form .input input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--filter-search form .input input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--filter-search form .input input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component--filter-search form .input input:hover, .component--filter-search form .input input:focus {
+  border-color: #555;
+}
+
+.component--filter-search form ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.component--filter-search form ul li:first-child {
+  margin-left: 5px;
+}
+
+.component--filter-search form ul li label .text {
+  margin: 0 1px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.component--filter-search form ul li label .text:hover {
+  background-color: #303236;
+}
+
+.component--filter-search form ul li label input {
+  display: none;
+}
+
+.component--filter-search form ul li label input:checked + .text {
+  border-color: #2ccdea;
+  background-color: #303236;
+  color: #2ccdea;
+}
+
+.component--filter {
+  background-color: #3d3f43;
+  border-radius: 5px;
+  padding: 40px 45px;
+}
+
+.component--filter form ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--filter form ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.component--filter form ul li .key {
+  width: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
+.component--filter form ul li .value {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.component--filter form ul li .value input, .component--filter form ul li .value select {
+  height: 50px;
+  width: 100%;
+  background-color: #303236;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  padding: 0 20px;
+}
+
+.component--filter form ul li .value select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: no-repeat 96% #303236 url(expand_more_black_24dp.svg);
+  cursor: pointer;
+}
+
+.component--filter form ul li .value select option {
+  height: 50px;
+  font-size: 16px;
+  background-color: #3d3f43;
+}
+
+.component--filter form ul li.filter-btn {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--filter form ul li.filter-btn a {
+  color: white;
+  padding: 15px 50px;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  border-radius: 30px;
+}
+
+.component--filter form ul li.filter-btn a:hover {
+  background-color: #303236;
+  color: #2ccdea;
+}
+
+.component--filter form ul li.filter-btn button {
+  height: 50px;
+  width: 200px;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, right top, left top, from(#31a5d9), to(#2ccdea));
+  background: linear-gradient(to left, #31a5d9, #2ccdea);
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.component--filter form ul li.filter-btn button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#31a5d9), to(#2ccdea));
+  background: linear-gradient(to right, #31a5d9, #2ccdea);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 5px 25px -2px #202225;
+          box-shadow: 0 5px 25px -2px #202225;
+}
+/*# sourceMappingURL=style.css.map */

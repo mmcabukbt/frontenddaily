@@ -1,0 +1,689 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url("./font/LouisGeorgeCafe-Bold.eot");
+  src: url("./font/LouisGeorgeCafe-Bold.eot?#iefix") format("embedded-opentype"), url("./font/LouisGeorgeCafe-Bold.woff2") format("woff2"), url("./font/LouisGeorgeCafe-Bold.woff") format("woff"), url("./font/LouisGeorgeCafe-Bold.ttf") format("truetype"), url("./font/LouisGeorgeCafe-Bold.svg#LouisGeorgeCafe-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url("./font/LouisGeorgeCafe.eot");
+  src: url("./font/LouisGeorgeCafe.eot?#iefix") format("embedded-opentype"), url("./font/LouisGeorgeCafe.woff2") format("woff2"), url("./font/LouisGeorgeCafe.woff") format("woff"), url("./font/LouisGeorgeCafe.ttf") format("truetype"), url("./font/LouisGeorgeCafe.svg#LouisGeorgeCafe") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url("./font/LouisGeorgeCafeLight.eot");
+  src: url("./font/LouisGeorgeCafeLight.eot?#iefix") format("embedded-opentype"), url("./font/LouisGeorgeCafeLight.woff2") format("woff2"), url("./font/LouisGeorgeCafeLight.woff") format("woff"), url("./font/LouisGeorgeCafeLight.ttf") format("truetype"), url("./font/LouisGeorgeCafeLight.svg#LouisGeorgeCafeLight") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("./icon-font/iconfont.eot?71890918");
+  src: url("./icon-font/iconfont.eot?71890918#iefix") format("embedded-opentype"), url("./icon-font/iconfont.woff2?71890918") format("woff2"), url("./icon-font/iconfont.woff?71890918") format("woff"), url("./icon-font/iconfont.ttf?71890918") format("truetype"), url("./icon-font/iconfont.svg?71890918#iconfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.svg?71890918#iconfont') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-arrow-right:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-atm:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-back:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-bank:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-block:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-card:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-chart:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-download:before {
+  content: '\e808';
+}
+
+/* '' */
+.icon-filter:before {
+  content: '\e809';
+}
+
+/* '' */
+.icon-loan:before {
+  content: '\e80b';
+}
+
+/* '' */
+.icon-pig:before {
+  content: '\e80c';
+}
+
+/* '' */
+.icon-pincode:before {
+  content: '\e80d';
+}
+
+/* '' */
+.icon-request:before {
+  content: '\e80f';
+}
+
+/* '' */
+.icon-send:before {
+  content: '\e811';
+}
+
+/* '' */
+.icon-plus:before {
+  content: '\e813';
+}
+
+/* '' */
+.icon-search:before {
+  content: '\e814';
+}
+
+/* '' */
+.icon-home:before {
+  content: '\e815';
+}
+
+/* '' */
+.icon-3dots:before {
+  content: '\e816';
+}
+
+/* '' */
+.icon-settings:before {
+  content: '\e817';
+}
+
+/* '' */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Louis George Cafe';
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #1a212a;
+}
+
+.app {
+  height: 100%;
+  /* ALT.HTML*/
+}
+
+.app .app-inner {
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+
+.app .app-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 27px 24px;
+}
+
+.app .app-header .balance .text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.app .app-header .balance .money {
+  font-size: 38px;
+  color: white;
+}
+
+.app .app-header .avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #157aff;
+  -webkit-box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.5);
+          box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.5);
+}
+
+.app .actions {
+  overflow: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  margin-bottom: 30px;
+}
+
+.app .actions ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .actions ul li {
+  padding: 0 15px;
+  scroll-snap-align: start;
+}
+
+.app .actions ul li:first-child {
+  padding-left: 24px;
+}
+
+.app .actions ul li:last-child {
+  padding-right: 24px;
+}
+
+.app .actions ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .actions ul li a .icon {
+  display: -ms-grid;
+  display: grid;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 24px;
+  background-color: rgba(83, 95, 109, 0.2);
+  color: white;
+  font-size: 26px;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.app .actions ul li a .icon i.icon-card {
+  font-size: 22px;
+}
+
+.app .actions ul li a .text {
+  font: size 14px;
+  color: white;
+  margin-top: 12px;
+  -webkit-transition: 300ms color ease;
+  transition: 300ms color ease;
+}
+
+.app .actions ul li a:hover .icon {
+  background-color: rgba(21, 122, 255, 0.4);
+}
+
+.app .actions ul li a:hover .text {
+  color: #157aff;
+}
+
+.app .transactions {
+  padding: 14px 24px;
+  background-color: #1b242e;
+  border-radius: 40px 40px 0 0;
+}
+
+.app .transactions .transaction-list {
+  margin-bottom: 17px;
+}
+
+.app .transactions .transaction-list li {
+  margin-bottom: 17px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(226, 233, 255, 0.2);
+}
+
+.app .transactions .transaction-list li:last-child {
+  border: none;
+}
+
+.app .transactions .transaction-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .transactions .transaction-list li a .icon {
+  height: 45px;
+  width: 45px;
+  margin-right: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.app .transactions .transaction-list li a .icon img {
+  max-width: 45px;
+  max-height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.app .transactions .transaction-list li a .icon.with-bg {
+  background-color: white;
+}
+
+.app .transactions .transaction-list li a .icon i {
+  color: #157aff;
+  font-size: 24px;
+}
+
+.app .transactions .transaction-list li a .transaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .transactions .transaction-list li a .transaction .title {
+  color: white;
+  font: size 16px;
+  font-weight: bold;
+}
+
+.app .transactions .transaction-list li a .transaction .date {
+  font: size 14px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
+}
+
+.app .transactions .transaction-list li a .transaction-money {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.app h6 {
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.app h6 .transaction-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app h6 .transaction-actions a {
+  display: -ms-grid;
+  display: grid;
+  display: grid;
+  place-items: center;
+  margin-left: 18px;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 16px;
+  background-color: rgba(83, 95, 109, 0.2);
+  font-size: 16px;
+  color: white;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.app h6 .transaction-actions a i.icon-card {
+  font-size: 22px;
+}
+
+.app .menu {
+  background-color: #1a212a;
+}
+
+.app .menu ul {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .menu ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.app .menu ul li a {
+  height: 60px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+}
+
+.app .menu ul li a i.icon-pig {
+  font-size: 24px;
+}
+
+.app .menu ul li.active a {
+  color: #157aff;
+}
+
+.app .page {
+  padding: 24px;
+}
+
+.app .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.app .back .back-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.app .back .back-btn i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.app .back .more-btn {
+  color: white;
+  font-size: 30px;
+}
+
+.app .swiper {
+  margin: 0 -34px 50px;
+  padding: 0 24px 35px;
+}
+
+.app .swiper .swiper-wrapper .swiper-slide {
+  width: 307px;
+}
+
+.app .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border: 1px solid white;
+  opacity: 1;
+}
+
+.app .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.app .card {
+  margin: 0 8px 0 40px;
+  min-width: 307px;
+  width: 307px;
+  height: 172px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 22px 21px 16px 27px;
+}
+
+.app .card.hdfc-bank {
+  background: -webkit-gradient(linear, left top, right top, from(#141414), to(#292929));
+  background: linear-gradient(to right, #141414, #292929);
+}
+
+.app .card.sbi-bank {
+  background: -webkit-gradient(linear, left top, right top, from(#6289ff), to(#5252ff));
+  background: linear-gradient(to right, #6289ff, #5252ff);
+}
+
+.app .card .bank-name {
+  font-size: 16px;
+  color: white;
+}
+
+.app .card .card-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .card .card-information div {
+  font-size: 15px;
+  color: white;
+}
+
+.app .card .card-information div span {
+  margin-right: 10px;
+}
+
+.app .card img {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+.app .peoples {
+  margin: 0 -24px 45px;
+}
+
+.app .peoples ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+.app .peoples ul li {
+  scroll-snap-align: start;
+  margin-right: 15px;
+}
+
+.app .peoples ul li:first-child {
+  padding-left: 24px;
+}
+
+.app .peoples ul li:last-child {
+  padding-right: 10px;
+}
+
+.app .peoples ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .peoples ul li .icon {
+  width: 60px;
+  height: 60px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #157aff;
+  border-radius: 24px;
+  color: white;
+  -webkit-box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.3);
+          box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.3);
+}
+
+.app .peoples ul li img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app .peoples ul li .name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.app .settings-menu {
+  border-top: 1px solid rgba(226, 233, 255, 0.1);
+}
+
+.app .settings-menu ul li {
+  border-bottom: 1px solid rgba(226, 233, 255, 0.1);
+}
+
+.app .settings-menu ul li:last-child {
+  border-bottom: none;
+}
+
+.app .settings-menu ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 22px 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.app .settings-menu ul li a i:first-child {
+  width: 50px;
+  text-align: center;
+  margin-right: 10ox;
+  color: #157aff;
+}
+
+.app .settings-menu ul li a i.icon-pincode {
+  font-size: 12px;
+}
+
+.app .settings-menu ul li a .icon-arrow-right {
+  margin-left: auto;
+  padding-right: 15px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */

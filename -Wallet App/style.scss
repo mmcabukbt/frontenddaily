@@ -1,0 +1,406 @@
+@import "font";
+@import "icon-font";
+
+$bg0_color: #1a212a;
+$bg1_color: #1b242e;
+
+$br1_color: #157aff;
+
+@mixin ortala {
+    display: grid;
+    place-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Louis George Cafe';
+    &:focus {
+        outline: none;
+    }
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: $bg0_color;
+}
+
+.app {
+    height: 100%;
+
+    .app-inner {
+        height: calc(100% - 60px);
+        overflow: auto;
+    }
+    
+    .app-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 27px 24px;
+        .balance {
+            .text {
+                font-size: 14px;
+                color: rgba(white, .5);                
+            }
+            .money {
+                font-size: 38px;
+                color: white;
+            }
+        }
+        .avatar {
+            img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: 2px solid $br1-color;
+                box-shadow: 0 6px 12px 0 rgba($br1_color, .5);
+            }
+        }
+    }
+
+    .actions {
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        margin-bottom: 30px;
+        ul {
+            display: flex;
+            li {
+                padding: 0 15px;
+                scroll-snap-align: start;
+                &:first-child {
+                    padding-left: 24px;
+                }
+                &:last-child {
+                    padding-right: 24px;
+                }
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .icon {
+                        display: grid;
+                        @include ortala;
+                        width: 60px;
+                        height: 60px;
+                        min-width: 60px;
+                        border-radius: 24px;
+                        background-color: rgba(#535f6D, .2);
+                        color: white;
+                        font-size: 26px;
+                        transition: 300ms background-color ease;
+                        i.icon-card {
+                            font-size: 22px;
+                        }
+                    }
+                    .text {
+                        font: size 14px;
+                        color: white;
+                        margin-top: 12px;
+                        transition: 300ms color ease;
+                    }
+                    &:hover {
+                        .icon {
+                            background-color: rgba($br1_color, .4);
+                        }
+                        .text {
+                            color: $br1_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .transactions {
+        padding: 14px 24px;
+        background-color: $bg1_color;
+        border-radius: 40px 40px 0 0 ;
+        .transaction-list {
+
+            margin-bottom: 17px;
+            li {
+                margin-bottom: 17px;
+                padding-bottom: 17px;
+                border-bottom: 1px solid rgba(#e2e9ff, .2);
+                &:last-child {
+                    border: none;
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    .icon {
+                        height: 45px;
+                        width: 45px;
+                        //@include ortala;
+                        margin-right: 20px;
+                        border-radius: 16px;
+                        overflow: hidden;
+                        img {
+                            max-width: 45px;
+                            max-height: 45px;
+                            object-fit: cover;
+                        }
+                        &.with-bg {
+                            background-color: white;
+                        }
+                        i {
+                            color: $br1_color;
+                            font-size: 24px;
+
+                        }
+                    }
+                    .transaction {
+                        display: flex;
+                        flex-direction: column;
+                        .title {
+                            color:white;
+                            font: size 16px;
+                            font-weight: bold;
+                        }
+                        .date {
+                            font: size 14px;
+                            color: rgba(white, .5);
+                            padding-top: 10px;
+                        }
+                    }
+                    .transaction-money {
+                        margin-left: auto;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    h6 {
+        padding-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        font-size: 16px;
+        font-weight: normal;
+        .transaction-actions {
+            display: flex;
+            a {
+                display: grid;
+                @include ortala;
+                margin-left: 18px;
+                width: 52px;
+                height: 52px;
+                min-width: 52px;
+                border-radius: 16px;
+                background-color: rgba(#535f6D, .2);
+                font-size: 16px;
+                color: white;
+                transition: 300ms background-color ease;
+                i.icon-card {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        background-color: $bg0_color;
+        ul {
+            height: 60px;
+            display: flex;
+            li {
+                flex: 1;
+                a {
+                    height: 60px;
+                    @include ortala;
+                    color: rgba(white, .5);
+                    font-size: 28px;
+                    i.icon-pig {
+                        font-size: 24px;
+                    }
+                }
+                &.active a {
+                    color: $br1-color;
+                }
+            }
+        }
+    }
+/* ALT.HTML*/
+    .page {
+        padding: 24px;
+    }
+    .back {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        .back-btn {
+            display: flex;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bold;
+            color:white;
+            i {
+                font-size: 20px;
+                margin-right: 15px;
+            }
+        }
+        .more-btn {
+            color: white;
+            font-size: 30px;
+        }        
+    }
+
+    .swiper{
+        margin: 0 -34px 50px;
+        padding: 0 24px 35px;
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 307px;
+                // &:first-child {
+                //     margin-left: 24px;
+                // }
+                // &:last-child {
+                //     margin-right: 48px;
+                // }
+            }
+        }
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                border: 1px solid white;
+                opacity: 1;
+                &.swiper-pagination-bullet-active {
+                    background-color: white;
+                }
+            }
+        }
+    }
+    .card {
+        margin: 0 8px 0 40px;
+        min-width: 307px;
+        width: 307px;
+        height: 172px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding:22px 21px 16px 27px;
+        &.hdfc-bank {
+            background: linear-gradient(to right, #141414, #292929);
+        }
+        &.sbi-bank {
+            background: linear-gradient(to right, #6289ff, #5252ff);
+        }
+        .bank-name {
+            font-size: 16px;
+            color: white;                
+        }
+        .card-information {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            div {
+                font-size: 15px;
+                color: white;
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+        img {
+            align-self: baseline;
+        }
+    }
+
+    .peoples {
+        margin: 0 -24px 45px;
+        ul {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            li {
+                scroll-snap-align: start;
+                margin-right: 15px;
+                &:first-child {
+                    padding-left: 24px;
+                }
+                &:last-child {
+                    padding-right: 10px;
+                }
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .icon {
+                    width: 60px;
+                    height: 60px;
+                    @include ortala;
+                    background-color: $br1_color;
+                    border-radius: 24px;
+                    color: white;
+                    box-shadow: 0 6px 12px 0 rgba($br1_color , .3);
+                }
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 24px;
+                    box-shadow: 0 10px 20px 0 rgba(black, .2);
+                }
+                .name {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: white;
+                }
+                
+
+            }
+        }
+    }
+
+    .settings-menu {
+        border-top: 1px solid rgba(#e2e9ff, .1);
+        ul {
+            li {
+                border-bottom: 1px solid rgba(#e2e9ff, .1);
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding: 22px 0;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: bold;
+                    i:first-child {
+                        width: 50px;
+                        text-align: center;
+                        margin-right: 10ox;
+                        color: $br1_color;
+                    }
+                    i.icon-pincode {
+                        font-size: 12px ;
+                    }
+                    .icon-arrow-right {
+                        margin-left: auto;
+                        padding-right: 15px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
