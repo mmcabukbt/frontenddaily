@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700&display=swap');
+
+$bg0_color: #f0f2fa;
+$bg1_color: #313b5e;
+$br1_color: #f3615c;
+$br2_color: #f3d6cd;
+// $txt_color: #9b008e;
+$txt_color: #111127;
+
+* {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   border: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'IBM Plex Sans', sans-serif;
+   &:focus {
+      outline: none;
+   }
+   color:$txt_color;
+}
+@mixin g_ortala {
+   display: grid;
+   place-items: center;
+}
+@mixin f_orta_sb {
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin f_orta_cc {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+html, body {
+   height: 100%;
+}
+body {
+   background-color: $bg0_color;
+   padding: 10px 50px;
+}
+.component {
+   background-color: white;
+   margin-top: 10px;
+   padding: 40px 50px;
+   border-radius: 10px;
+   box-shadow: 0 10px 30px -10px $bg1_color;
+   h3 {
+      letter-spacing: -.2px;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+   }
+   p {
+      margin-bottom: 35px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+   }
+   &--1 {
+      width: 300px;
+      ul {
+         li {
+            &:not(:last-child) {
+               margin-bottom: 20px;
+            }
+            label {
+               display: flex;
+               align-items: center;
+               font-size: 16px;
+               font-weight: 600;
+               cursor: pointer;
+               input {
+                  cursor: pointer;
+                  appearance: none;
+                  margin-right: 10px;
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 50%;
+                  border: 1px solid #cccccc;
+                  position: relative;
+                  transition: 300ms border-color ease;
+                  &::before {
+                     position: absolute;
+                     content: "";
+                     width: 15px;
+                     height: 15px;
+                     left: 4px;
+                     top: 4px;
+                     border-radius: 50%;
+                     transform: scale(1.6);
+                     opacity: 0;
+                     background-color: royalblue;
+                     transition: 300ms transform ease, 300ms opacity ease;
+                  }
+                  &:hover {
+                     border-color: royalblue;
+                  }
+                  &:checked {
+                     border-color: royalblue;
+                     &::before {
+                        opacity: 1;
+                        transform: scale(1);
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   &--2 {
+      width: 375px;
+         .actions {
+         @include f_orta_sb;
+         button {
+            cursor: pointer;
+            @include f_orta_cc;
+            width: 125px;
+            height: 50px;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 300ms color ease, 300ms background-color ease;
+            box-shadow: 0 2px 10px 4px $br1_color;
+            &:hover, &[type="submit"] {
+               background-color: $br1_color;
+               color: white;
+            }
+         }
+      }
+   }
+   &--3 {
+      width: 570px;
+      #tags {
+         padding: 10px;
+         gap: 10px;
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+         border-radius: 8px;
+         border: 1px solid #cccccc;
+         position: relative;
+         &::before {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            content: "❌ " attr(data-message);
+            width: 100%;
+            left: -10px;
+            height: 30px;
+            bottom: -31px;
+            font-size: 15px;
+            color: rgb(158, 15, 15);
+            border-radius: 35px;
+            background-color:#ffdada;
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: 200ms transform ease;
+         }
+         &.error {
+            &::before {
+               transform: scaleY(1);
+            }
+         }
+         .tag {
+            display: flex;
+            align-items: center;
+            height: 38px;
+            padding: 0px 6px 0px 14px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 5px;
+            background-color: $bg0_color;
+            cursor: default;
+            transition: 300ms transform ease, 300ms background-color ease, 300ms box-shadow ease;
+            button {
+               cursor: pointer;
+               margin-left: 5px;
+               width: 26px;
+               height: 26px;
+               font-size: 16px;
+               border-radius: 50%;
+               background-color:white;
+               transition: 300ms color ease, 300ms background-color ease;
+               &:hover {
+                  background-color: $br1_color;
+                  color: white;
+               }
+            }
+            &:hover {
+               background-color: $br2_color;
+               transform: translateY(-1px);
+               box-shadow: 0 12px 15px -10px $br1_color;
+            }
+         }
+         #tag-input {
+            flex: 1;
+            height: 38px;
+            min-width: 115px;
+            padding: 0 8px;
+            font-size: 15px;
+            border-radius: 5px;
+            transition: 300ms background-color ease;
+            &::placeholder{
+               color: white;
+            }
+            &:hover, &:focus {
+               background-color: darken($bg0_color, 3);
+            }
+         }
+      }
+   }
+}

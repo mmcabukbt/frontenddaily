@@ -1,0 +1,289 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #111127;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f0f2fa;
+  padding: 10px 50px;
+}
+
+.component {
+  background-color: white;
+  margin-top: 10px;
+  padding: 40px 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 30px -10px #313b5e;
+          box-shadow: 0 10px 30px -10px #313b5e;
+}
+
+.component h3 {
+  letter-spacing: -.2px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.component p {
+  margin-bottom: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.component--1 {
+  width: 300px;
+}
+
+.component--1 ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.component--1 ul li label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.component--1 ul li label input {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  position: relative;
+  -webkit-transition: 300ms border-color ease;
+  transition: 300ms border-color ease;
+}
+
+.component--1 ul li label input::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  opacity: 0;
+  background-color: royalblue;
+  -webkit-transition: 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms opacity ease, 300ms -webkit-transform ease;
+  transition: 300ms transform ease, 300ms opacity ease;
+  transition: 300ms transform ease, 300ms opacity ease, 300ms -webkit-transform ease;
+}
+
+.component--1 ul li label input:hover {
+  border-color: royalblue;
+}
+
+.component--1 ul li label input:checked {
+  border-color: royalblue;
+}
+
+.component--1 ul li label input:checked::before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.component--2 {
+  width: 375px;
+}
+
+.component--2 .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component--2 .actions button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 125px;
+  height: 50px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  -webkit-transition: 300ms color ease, 300ms background-color ease;
+  transition: 300ms color ease, 300ms background-color ease;
+  -webkit-box-shadow: 0 2px 10px 4px #f3615c;
+          box-shadow: 0 2px 10px 4px #f3615c;
+}
+
+.component--2 .actions button:hover, .component--2 .actions button[type="submit"] {
+  background-color: #f3615c;
+  color: white;
+}
+
+.component--3 {
+  width: 570px;
+}
+
+.component--3 #tags {
+  padding: 10px;
+  gap: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  position: relative;
+}
+
+.component--3 #tags::before {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  content: "❌ " attr(data-message);
+  width: 100%;
+  left: -10px;
+  height: 30px;
+  bottom: -31px;
+  font-size: 15px;
+  color: #9e0f0f;
+  border-radius: 35px;
+  background-color: #ffdada;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: 200ms -webkit-transform ease;
+  transition: 200ms -webkit-transform ease;
+  transition: 200ms transform ease;
+  transition: 200ms transform ease, 200ms -webkit-transform ease;
+}
+
+.component--3 #tags.error::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.component--3 #tags .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 38px;
+  padding: 0px 6px 0px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #f0f2fa;
+  cursor: default;
+  -webkit-transition: 300ms background-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms background-color ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+  transition: 300ms transform ease, 300ms background-color ease, 300ms box-shadow ease;
+  transition: 300ms transform ease, 300ms background-color ease, 300ms box-shadow ease, 300ms -webkit-transform ease, 300ms -webkit-box-shadow ease;
+}
+
+.component--3 #tags .tag button {
+  cursor: pointer;
+  margin-left: 5px;
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: 300ms color ease, 300ms background-color ease;
+  transition: 300ms color ease, 300ms background-color ease;
+}
+
+.component--3 #tags .tag button:hover {
+  background-color: #f3615c;
+  color: white;
+}
+
+.component--3 #tags .tag:hover {
+  background-color: #f3d6cd;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 12px 15px -10px #f3615c;
+          box-shadow: 0 12px 15px -10px #f3615c;
+}
+
+.component--3 #tags #tag-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 38px;
+  min-width: 115px;
+  padding: 0 8px;
+  font-size: 15px;
+  border-radius: 5px;
+  -webkit-transition: 300ms background-color ease;
+  transition: 300ms background-color ease;
+}
+
+.component--3 #tags #tag-input::-webkit-input-placeholder {
+  color: white;
+}
+
+.component--3 #tags #tag-input:-ms-input-placeholder {
+  color: white;
+}
+
+.component--3 #tags #tag-input::-ms-input-placeholder {
+  color: white;
+}
+
+.component--3 #tags #tag-input::placeholder {
+  color: white;
+}
+
+.component--3 #tags #tag-input:hover, .component--3 #tags #tag-input:focus {
+  background-color: #e5e8f6;
+}
+/*# sourceMappingURL=style.css.map */
